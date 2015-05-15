@@ -1,0 +1,104 @@
+﻿<Window x:Name="WndRecentlyPackedShipment" x:Class="Packing_Net.Pages.ReportPages.wndRecentPacked"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Recent Packed" Height="760" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="LabelConstants" TargetType="Label">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <Style x:Key="lblVeriabels" TargetType="Label">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style x:Key="StyleLabelHeaders" TargetType="Label">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Canvas Name="cvsMain" Margin="0,-35,0,35">
+            <Border Style="{StaticResource StyleFormLayout}" Height="596" Width="825" Canvas.Left="212" Canvas.Top="103" BorderBrush="#00A6A4A4" >
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFCDD1D3" Offset="0"/>
+                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Canvas Height="573" Canvas.Left="205" Canvas.Top="118" Margin="-1,-1,-1,22">
+
+                    <Button TabIndex="8" Style="{StaticResource StyleButton}" x:Name="btnContinue" Content="Continue Next Shipment" Canvas.Left="522" Canvas.Top="530"  Background="#FF494949" Foreground="White" Height="43" BorderBrush="{x:Null}" Width="241" Click="btnContinue_Click"/>
+                    <Canvas Background="#FFAEAEAE" Height="138" Width="708" Canvas.Top="30" Canvas.Left="55" >
+                        <Label HorizontalContentAlignment="Center"  Style="{StaticResource StyleLabelHeaders}" Content="Recently Packed Shipment Details" Width="708" Height="35" Background="#FF05AEEE"/>
+                        <Label HorizontalContentAlignment="Right" Style="{StaticResource LabelConstants}" Content="Shipment ID:" Canvas.Top="33" Width="115" Canvas.Left="24"/>
+                        <Label x:Name="lblDShipmentID" HorizontalContentAlignment="Left" Style="{StaticResource lblVeriabels}" Content="SHXXXXXX" Canvas.Top="33" Width="150" Canvas.Left="136"/>
+                        <Label HorizontalContentAlignment="Right" Style="{StaticResource LabelConstants}" Content="Packing Status:" Canvas.Top="69" Width="145" Canvas.Left="-6"/>
+                        <Label x:Name="lblDStatus" HorizontalContentAlignment="Left" Style="{StaticResource lblVeriabels}" Content="Partially Packed" Canvas.Top="69" Width="160" Canvas.Left="136"/>
+                        <Label HorizontalContentAlignment="Right" Style="{StaticResource LabelConstants}" Content="User Name:" Canvas.Top="33" Width="110" Canvas.Left="302"/>
+                        <Label x:Name="lblDUserName" HorizontalContentAlignment="Left" Style="{StaticResource lblVeriabels}" Content="Avinash Patil" Canvas.Top="33" Width="296" Canvas.Left="412"/>
+                        <Label HorizontalContentAlignment="Right" Style="{StaticResource LabelConstants}" Content="Time spend :" Canvas.Top="69" Width="126" Canvas.Left="286"/>
+                        <Label x:Name="lblDTime" HorizontalContentAlignment="Left" Style="{StaticResource lblVeriabels}" Content="00:00:00" Canvas.Top="69" Width="160" Canvas.Left="412"/>
+                        <Label HorizontalContentAlignment="Right" Style="{StaticResource LabelConstants}" Content="Total SKU Qty. :" Canvas.Top="100" Width="138" Canvas.Left="1"/>
+                        <Label x:Name="lblDItem" HorizontalContentAlignment="Left" Style="{StaticResource lblVeriabels}" Content="50" Canvas.Top="100" Width="160" Canvas.Left="136"/>
+                        <Label HorizontalContentAlignment="Right" Style="{StaticResource LabelConstants}" Content="Location :" Canvas.Top="100" Width="87" Canvas.Left="320"/>
+                        <Label x:Name="lblDLocation" HorizontalContentAlignment="Left" Style="{StaticResource lblVeriabels}" Content="50" Canvas.Top="100" Width="160" Canvas.Left="412"/>
+                    </Canvas>
+                    <DataGrid  x:Name="dgvPackedDetailsList"
+                	AutoGenerateColumns="False"
+                	HorizontalAlignment="Left"
+                	VerticalAlignment="Top"
+                	Height="333"
+                	Width="706" 
+                	Background="{x:Null}"
+                	Canvas.Top="168"
+                	ItemsSource="{Binding}"
+                	ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                	ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                	CanUserAddRows="False"
+                	CanUserResizeColumns="False"
+                	HorizontalGridLinesBrush="#FF474747" 
+                	VerticalGridLinesBrush="{x:Null}" 
+                	GridLinesVisibility="Horizontal" 
+                	IsReadOnly="True"
+                	SelectionMode="Single" Canvas.Left="57" >
+                        <DataGrid.ColumnHeaderStyle >
+                            <Style TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="FontSize" Value="17"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="FontFamily" Value="Arial"/>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn IsReadOnly="True"  Header="SKU Name" Binding="{Binding SKUNumber}" Width="160" FontSize="14"  Foreground="#FF04266E" />
+                            <DataGridTextColumn  IsReadOnly="True" Header="Packed Qty." Binding="{Binding SKUQuantity}" Width="120" FontSize="14"  Foreground="#FF04266E" />
+                            <DataGridTextColumn IsReadOnly="True" Header="Packing Start" Binding="{Binding PackingDetailStartDateTime}" Width="150" FontSize="14"  Foreground="#FF04266E" />
+                            <DataGridTextColumn IsReadOnly="True" Header="Packing End" Binding="{Binding PackingDetailEndDateTime}" Width="150" FontSize="14"  Foreground="#FF04266E" />
+                            <DataGridTextColumn IsReadOnly="True" Header="Box Qty." Binding="{Binding BoxQuantity}" Width="80" FontSize="14"  Foreground="#FF04266E" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Canvas>
+            </Border>
+            <Border Style="{StaticResource StyleApplicationBorderTOp}"
+                    CornerRadius="0"   Background="Black" Width="1272" >
+                <Canvas Margin="-1,0,0,0">
+                    <Label Content="Shipping Manager" Style="{StaticResource lblTitleName}" Canvas.Left="206" Canvas.Top="21"/>
+                    <Border BorderBrush="Black" BorderThickness="2"
+                    Height="85"
+                    Canvas.Top=" 1" Width="201" 
+                    Background="#00AEEAF3" >
+                        <Image Source="/PackingNet;component/Images/imgKrausLogo.png" 
+                       Stretch="UniformToFill" Margin="-1,0,1,0"/>
+                    </Border>
+                </Canvas>
+            </Border>
+        </Canvas>
+
+
+    </Grid>
+</Window>

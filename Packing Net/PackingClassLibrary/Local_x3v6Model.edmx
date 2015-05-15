@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="x3v6Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="x3v6Model1StoreContainer">
+          <EntitySet Name="SKU_URL_Info" EntityType="x3v6Model1.Store.SKU_URL_Info" store:Type="Tables" store:Schema="dbo" store:Name="SKU_URL_Info">
+            <DefiningQuery>SELECT 
+      [SKU_URL_Info].[SKU] AS [SKU], 
+      [SKU_URL_Info].[SKUrl] AS [SKUrl]
+      FROM [dbo].[SKU_URL_Info] AS [SKU_URL_Info]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Packing" EntityType="x3v6Model1.Store.Packing" store:Type="Tables" Schema="PRODUCTION" />
+          <EntitySet Name="PackingDetail" EntityType="x3v6Model1.Store.PackingDetail" store:Type="Tables" Schema="PRODUCTION" />
+          <EntitySet Name="UserMaster" EntityType="x3v6Model1.Store.UserMaster" store:Type="Tables" Schema="PRODUCTION" />
+          <AssociationSet Name="FK_PackingDetail_Packing" Association="x3v6Model1.Store.FK_PackingDetail_Packing">
+            <End Role="Packing" EntitySet="Packing" />
+            <End Role="PackingDetail" EntitySet="PackingDetail" />
+          </AssociationSet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'x3v6.dbo.SKU_URL_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SKU_URL_Info">
+          <Key>
+            <PropertyRef Name="SKU" />
+            <PropertyRef Name="SKUrl" />
+          </Key>
+          <Property Name="SKU" Type="varchar(max)" Nullable="false" />
+          <Property Name="SKUrl" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Packing">
+          <Key>
+            <PropertyRef Name="PackingId" />
+          </Key>
+          <Property Name="PackingId" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="UserId" Type="bigint" />
+          <Property Name="BoxType" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoxWeight" Type="float" />
+          <Property Name="BoxDimension" Type="nvarchar" MaxLength="50" />
+          <Property Name="StartTime" Type="datetime" />
+          <Property Name="EndTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PackingDetail">
+          <Key>
+            <PropertyRef Name="PackingDetailID" />
+          </Key>
+          <Property Name="PackingDetailID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PackingId" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SKUNumber" Type="varchar(max)" />
+          <Property Name="SKUQuantity" Type="int" />
+          <Property Name="PackingDetailStartDateTime" Type="datetime" />
+          <Property Name="PackingDetailEndDateTime" Type="datetime" />
+          <Property Name="BoxQuantity" Type="int" />
+        </EntityType>
+        <EntityType Name="UserMaster">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserFullName" Type="varchar(max)" />
+          <Property Name="UserName" Type="varchar(max)" />
+          <Property Name="UserAddress" Type="varchar(max)" />
+          <Property Name="UserJoiningDate" Type="datetime" />
+          <Property Name="UserAccessChar" Type="varchar(max)" />
+          <Property Name="UserPassword" Type="varchar(max)" />
+          <Property Name="UserStation" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_PackingDetail_Packing">
+          <End Role="Packing" Type="x3v6Model1.Store.Packing" Multiplicity="1" />
+          <End Role="PackingDetail" Type="x3v6Model1.Store.PackingDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Packing">
+              <PropertyRef Name="PackingId" />
+            </Principal>
+            <Dependent Role="PackingDetail">
+              <PropertyRef Name="PackingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="x3v6Model1" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="local_x3v6Entities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Packings" EntityType="x3v6Model1.Packing" />
+          <EntitySet Name="PackingDetails" EntityType="x3v6Model1.PackingDetail" />
+          <EntitySet Name="UserMasters" EntityType="x3v6Model1.UserMaster" />
+          <AssociationSet Name="FK_PackingDetail_Packing" Association="x3v6Model1.FK_PackingDetail_Packing">
+            <End Role="Packing" EntitySet="Packings" />
+            <End Role="PackingDetail" EntitySet="PackingDetails" />
+          </AssociationSet>
+          <EntitySet Name="SKU_URL_Info" EntityType="x3v6Model1.SKU_URL_Info" />
+        </EntityContainer>
+        <EntityType Name="Packing">
+          <Key>
+            <PropertyRef Name="PackingId" />
+          </Key>
+          <Property Name="PackingId" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="BoxType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BoxWeight" Type="Double" />
+          <Property Name="BoxDimension" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StartTime" Type="DateTime" Precision="3" />
+          <Property Name="EndTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="PackingDetails" Relationship="x3v6Model1.FK_PackingDetail_Packing" FromRole="Packing" ToRole="PackingDetail" />
+        </EntityType>
+        <EntityType Name="PackingDetail">
+          <Key>
+            <PropertyRef Name="PackingDetailID" />
+          </Key>
+          <Property Name="PackingDetailID" Type="Int64" Nullable="false" />
+          <Property Name="PackingId" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SKUNumber" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="SKUQuantity" Type="Int32" />
+          <Property Name="PackingDetailStartDateTime" Type="DateTime" Precision="3" />
+          <Property Name="PackingDetailEndDateTime" Type="DateTime" Precision="3" />
+          <Property Name="BoxQuantity" Type="Int32" />
+          <NavigationProperty Name="Packing" Relationship="x3v6Model1.FK_PackingDetail_Packing" FromRole="PackingDetail" ToRole="Packing" />
+        </EntityType>
+        <EntityType Name="UserMaster">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="UserAddress" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="UserJoiningDate" Type="DateTime" Precision="3" />
+          <Property Name="UserAccessChar" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="UserPassword" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Type="String" Name="UserFullName" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UserStation" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_PackingDetail_Packing">
+          <End Role="Packing" Type="x3v6Model1.Packing" Multiplicity="1" />
+          <End Role="PackingDetail" Type="x3v6Model1.PackingDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Packing">
+              <PropertyRef Name="PackingId" />
+            </Principal>
+            <Dependent Role="PackingDetail">
+              <PropertyRef Name="PackingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SKU_URL_Info">
+          <Key>
+            <PropertyRef Name="SKU" />
+            <PropertyRef Name="SKUrl" />
+          </Key>
+          <Property Type="String" Name="SKU" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SKUrl" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="x3v6Model1StoreContainer" CdmEntityContainer="local_x3v6Entities">
+          <EntitySetMapping Name="Packings">
+            <EntityTypeMapping TypeName="x3v6Model1.Packing">
+              <MappingFragment StoreEntitySet="Packing">
+                <ScalarProperty Name="PackingId" ColumnName="PackingId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="BoxType" ColumnName="BoxType" />
+                <ScalarProperty Name="BoxWeight" ColumnName="BoxWeight" />
+                <ScalarProperty Name="BoxDimension" ColumnName="BoxDimension" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PackingDetails">
+            <EntityTypeMapping TypeName="x3v6Model1.PackingDetail">
+              <MappingFragment StoreEntitySet="PackingDetail">
+                <ScalarProperty Name="PackingDetailID" ColumnName="PackingDetailID" />
+                <ScalarProperty Name="PackingId" ColumnName="PackingId" />
+                <ScalarProperty Name="SKUNumber" ColumnName="SKUNumber" />
+                <ScalarProperty Name="SKUQuantity" ColumnName="SKUQuantity" />
+                <ScalarProperty Name="PackingDetailStartDateTime" ColumnName="PackingDetailStartDateTime" />
+                <ScalarProperty Name="PackingDetailEndDateTime" ColumnName="PackingDetailEndDateTime" />
+                <ScalarProperty Name="BoxQuantity" ColumnName="BoxQuantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserMasters">
+            <EntityTypeMapping TypeName="x3v6Model1.UserMaster">
+              <MappingFragment StoreEntitySet="UserMaster">
+                <ScalarProperty Name="UserStation" ColumnName="UserStation" />
+                <ScalarProperty Name="UserFullName" ColumnName="UserFullName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserAddress" ColumnName="UserAddress" />
+                <ScalarProperty Name="UserJoiningDate" ColumnName="UserJoiningDate" />
+                <ScalarProperty Name="UserAccessChar" ColumnName="UserAccessChar" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SKU_URL_Info">
+            <EntityTypeMapping TypeName="x3v6Model1.SKU_URL_Info">
+              <MappingFragment StoreEntitySet="SKU_URL_Info">
+                <ScalarProperty Name="SKUrl" ColumnName="SKUrl" />
+                <ScalarProperty Name="SKU" ColumnName="SKU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Default" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

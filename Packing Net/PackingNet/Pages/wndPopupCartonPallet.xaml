@@ -1,0 +1,14 @@
+﻿<Window x:Class="PackingNet.Pages.wndPopupCartonPallet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SelectOne" Height="300" Width="361" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="DimGray" BorderBrush="White">
+    <Grid>
+        <Viewbox Canvas.Left="81" Canvas.Top="141" Margin="-2,63,54,161" >
+            <RadioButton Content="Modify" x:Name="rdoCarton" Checked="rdoCarton_Checked_1" FontSize="25" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="41" Width="109"  />
+        </Viewbox>
+        <Viewbox Canvas.Left="81" Canvas.Top="141" Margin="19,149,-30,56">
+            <RadioButton Content="Print SSCC-18" x:Name="rdoPallet" Checked="rdoPallet_Checked_1"  FontSize="25" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="53" Width="175"   />
+        </Viewbox>
+        <Button Content="Close" HorizontalAlignment="Left"  FontSize="25" Margin="255,0,0,0" VerticalAlignment="Top" Width="95" Height="40" Click="Button_Click_1" />
+    </Grid>
+</Window>

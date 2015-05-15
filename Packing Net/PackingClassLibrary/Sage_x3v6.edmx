@@ -1,0 +1,1811 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="x3v6Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="x3v6ModelStoreContainer">
+          <EntitySet Name="ITMMASTER" EntityType="x3v6Model.Store.ITMMASTER" store:Type="Tables" Schema="DEVELOPER" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SORDERP" EntityType="x3v6Model.Store.SORDERP" store:Type="Tables" Schema="DEVELOPER" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SORDERQ" EntityType="x3v6Model.Store.SORDERQ" store:Type="Tables" Schema="DEVELOPER" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="STOJOU" EntityType="x3v6Model.Store.STOJOU" store:Type="Tables" Schema="DEVELOPER" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+        </EntityContainer>
+        <EntityType Name="ITMMASTER">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="ITMREF_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TSICOD_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TSICOD_1" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TSICOD_2" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TSICOD_3" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TSICOD_4" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TCLCOD_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="SEAKEY_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="DIE_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_1" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_2" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_3" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_4" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_5" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_6" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_7" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_8" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_9" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_10" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_11" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_12" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_13" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_14" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_15" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_16" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_17" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_18" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_19" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="CCE_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_1" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_2" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_3" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_4" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_5" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_6" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_7" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_8" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_9" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_10" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_11" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_12" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_13" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_14" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_15" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_16" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_17" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_18" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_19" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="ACCCOD_0" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="ITMDES1_0" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="ITMDES2_0" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="ITMDES3_0" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="STDFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="ITMSTD_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="EANCOD_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ITMSTA_0" Type="tinyint" Nullable="false" />
+          <Property Name="DEFPOT_0" Type="numeric" Nullable="false" Precision="14" Scale="5" />
+          <Property Name="DEFACT_0" Type="numeric" Nullable="false" Precision="14" Scale="5" />
+          <Property Name="LIFSTRDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="LIFENDDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="STOCRD_0" Type="nvarchar" Nullable="false" MaxLength="8" />
+          <Property Name="STU_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="PUU_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="SAU_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="SSU_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="EEU_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="PUUSTUCOE_0" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="DACPUUCOE_0" Type="tinyint" Nullable="false" />
+          <Property Name="SAUSTUCOE_0" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="DACSAUCOE_0" Type="tinyint" Nullable="false" />
+          <Property Name="SSUSTUCOE_0" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="EEUSTUCOE_0" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="WEU_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="ITMWEI_0" Type="numeric" Nullable="false" Precision="13" Scale="4" />
+          <Property Name="VOU_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="ITMVOU_0" Type="numeric" Nullable="false" Precision="12" Scale="4" />
+          <Property Name="PCU_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="PCU_1" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="PCU_2" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="PCU_3" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="PCU_4" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="PCU_5" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="PCU_6" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="PCU_7" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="PCU_8" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="PCU_9" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="PCUSTUCOE_0" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="PCUSTUCOE_1" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="PCUSTUCOE_2" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="PCUSTUCOE_3" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="PCUSTUCOE_4" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="PCUSTUCOE_5" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="PCUSTUCOE_6" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="PCUSTUCOE_7" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="PCUSTUCOE_8" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="PCUSTUCOE_9" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="DACPCUCOE_0" Type="tinyint" Nullable="false" />
+          <Property Name="DACPCUCOE_1" Type="tinyint" Nullable="false" />
+          <Property Name="DACPCUCOE_2" Type="tinyint" Nullable="false" />
+          <Property Name="DACPCUCOE_3" Type="tinyint" Nullable="false" />
+          <Property Name="DACPCUCOE_4" Type="tinyint" Nullable="false" />
+          <Property Name="DACPCUCOE_5" Type="tinyint" Nullable="false" />
+          <Property Name="DACPCUCOE_6" Type="tinyint" Nullable="false" />
+          <Property Name="DACPCUCOE_7" Type="tinyint" Nullable="false" />
+          <Property Name="DACPCUCOE_8" Type="tinyint" Nullable="false" />
+          <Property Name="DACPCUCOE_9" Type="tinyint" Nullable="false" />
+          <Property Name="PCURUL_0" Type="tinyint" Nullable="false" />
+          <Property Name="PCURUL_1" Type="tinyint" Nullable="false" />
+          <Property Name="PCURUL_2" Type="tinyint" Nullable="false" />
+          <Property Name="PCURUL_3" Type="tinyint" Nullable="false" />
+          <Property Name="PCURUL_4" Type="tinyint" Nullable="false" />
+          <Property Name="PCURUL_5" Type="tinyint" Nullable="false" />
+          <Property Name="PCURUL_6" Type="tinyint" Nullable="false" />
+          <Property Name="PCURUL_7" Type="tinyint" Nullable="false" />
+          <Property Name="PCURUL_8" Type="tinyint" Nullable="false" />
+          <Property Name="PCURUL_9" Type="tinyint" Nullable="false" />
+          <Property Name="LBEFMT_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="LBEFMT_1" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="LBEFMT_2" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="LBEFMT_3" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="LBEFMT_4" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="LBEFMT_5" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="LBEFMT_6" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="LBEFMT_7" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="LBEFMT_8" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="LBEFMT_9" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="STOMGTCOD_0" Type="tinyint" Nullable="false" />
+          <Property Name="LOTMGTCOD_0" Type="tinyint" Nullable="false" />
+          <Property Name="LOTCOU_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="SERCOU_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="SERMGTCOD_0" Type="tinyint" Nullable="false" />
+          <Property Name="EXYMGTCOD_0" Type="tinyint" Nullable="false" />
+          <Property Name="EXYSTA_0" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="SHL_0" Type="smallint" Nullable="false" />
+          <Property Name="SHLLTI_0" Type="smallint" Nullable="false" />
+          <Property Name="NEGSTO_0" Type="tinyint" Nullable="false" />
+          <Property Name="CSTGRP_0" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="BRDCOD_0" Type="tinyint" Nullable="false" />
+          <Property Name="PLAACS_0" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="RPLITM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="EECGES_0" Type="tinyint" Nullable="false" />
+          <Property Name="CUSREF_0" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="VACITM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="VACITM_1" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="VACITM_2" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="FRTHORUOM_0" Type="tinyint" Nullable="false" />
+          <Property Name="FRTHOR_0" Type="smallint" Nullable="false" />
+          <Property Name="FIMHOR_0" Type="smallint" Nullable="false" />
+          <Property Name="FIMHORUOM_0" Type="tinyint" Nullable="false" />
+          <Property Name="BUY_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="PLANNER_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="OFS_0" Type="smallint" Nullable="false" />
+          <Property Name="MINRMNPRC_0" Type="numeric" Nullable="false" Precision="8" Scale="3" />
+          <Property Name="RCPFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="PRQFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="PURTEX_0" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="MFGTEX_0" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="ITMEXNFLG_0" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="STATAXFLG_0" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="CFGLIN_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="CFGFLDNUM1_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="CFGFLDNUM2_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="CFGFLDNUM3_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="CFGFLDNUM4_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="CFGFLDNUM5_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="CFGFLDNUM6_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="CFGFLDALP1_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CFGFLDALP2_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CFGFLDALP3_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CFGFLDALP4_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CFGFLDALP5_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CFGFLDALP6_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CFGVCRNUM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CFGBPRNUM_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CFGBPRREF_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CFGITMREF_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CFGDELDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="CREMAC_0" Type="tinyint" Nullable="false" />
+          <Property Name="FLYCAT_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TPLCONLND_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TPLCONGUA_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TPLCONSRV_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="PITCDT_0" Type="int" Nullable="false" />
+          <Property Name="PITCDTUOM_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="STULBEFMT_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="ALTBOMHDK_0" Type="smallint" Nullable="false" />
+          <Property Name="HDKITMTYP_0" Type="tinyint" Nullable="false" />
+          <Property Name="STOISSDEF_0" Type="tinyint" Nullable="false" />
+          <Property Name="DAYUOM_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="HOUUOM_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="MNTUOM_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DTY_0" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="TRKCOD_0" Type="tinyint" Nullable="false" />
+          <Property Name="PURFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="MFGFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="SCPFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="SCSFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="PHAFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="GENFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="TOOFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="DLVFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="SALFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="INTFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="FLGFAS_0" Type="tinyint" Nullable="false" />
+          <Property Name="NEWLTISTA_0" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="DLU_0" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="XC_SCLASS_0" Type="tinyint" Nullable="false" />
+          <Property Name="SHLUOM_0" Type="tinyint" Nullable="false" />
+          <Property Name="SHLLTIUOM_0" Type="tinyint" Nullable="false" />
+          <Property Name="EXPNUM_0" Type="int" Nullable="false" />
+          <Property Name="CREDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="CREUSR_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="UPDDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="UPDUSR_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="XC_MATTOT_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="STAFED_0" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="PLMITMREF_0" Type="nvarchar" Nullable="false" MaxLength="70" />
+          <Property Name="PLMATTURL_0" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="PLMHISURL_0" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="CRESTP_0" Type="nvarchar" Nullable="false" MaxLength="14" />
+          <Property Name="UPDSTP_0" Type="nvarchar" Nullable="false" MaxLength="14" />
+          <Property Name="IDTSGL_0" Type="nvarchar" Nullable="false" MaxLength="36" />
+          <Property Name="XDUTCOD_0" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="XC_PCKTYP_0" Type="tinyint" Nullable="false" />
+          <Property Name="XC_NMFC_0" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="XC_ADDHNDL_0" Type="smallint" Nullable="false" />
+          <Property Name="XC_OVRSZ_0" Type="smallint" Nullable="false" />
+          <Property Name="XC_FRTUNITS_0" Type="numeric" Nullable="false" Precision="28" Scale="8" />
+          <Property Name="XA_VOLUOM_0" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="XB_FRTCLS_0" Type="tinyint" Nullable="false" />
+          <Property Name="XA_ITMURL_0" Type="nvarchar" Nullable="false" MaxLength="120" />
+          <Property Name="XA_WID_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="XA_HEI_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="XA_DTH_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="XA_PRDVOL_0" Type="numeric" Nullable="false" Precision="12" Scale="4" />
+          <Property Name="XA_ALGITM_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="XA_ALGITMCON_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ZITMDES4_0" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="ROWID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="SORDERP">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="SOHNUM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="SOPLIN_0" Type="int" Nullable="false" />
+          <Property Name="SOPSEQ_0" Type="int" Nullable="false" />
+          <Property Name="CPY_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="SOHCAT_0" Type="tinyint" Nullable="false" />
+          <Property Name="STRDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="ENDDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="BPCORD_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="BPAADD_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="CNDNAM_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="BPCINV_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="STOFCY_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="SALFCY_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="ITMREF_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ITMDES1_0" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="ITMDES_0" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="ITMREFBPC_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="VACITM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="VACITM_1" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="VACITM_2" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="REP1_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="REP2_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="REPRAT1_0" Type="numeric" Nullable="false" Precision="8" Scale="3" />
+          <Property Name="REPRAT2_0" Type="numeric" Nullable="false" Precision="8" Scale="3" />
+          <Property Name="REPCOE_0" Type="numeric" Nullable="false" Precision="6" Scale="3" />
+          <Property Name="GROPRI_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="PRIREN_0" Type="smallint" Nullable="false" />
+          <Property Name="NETPRI_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="NETPRINOT_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="NETPRIATI_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="PFM_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="CPRPRI_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL1_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL2_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL3_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL4_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL5_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL6_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL7_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL8_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL9_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGREN1_0" Type="smallint" Nullable="false" />
+          <Property Name="DISCRGREN2_0" Type="smallint" Nullable="false" />
+          <Property Name="DISCRGREN3_0" Type="smallint" Nullable="false" />
+          <Property Name="DISCRGREN4_0" Type="smallint" Nullable="false" />
+          <Property Name="DISCRGREN5_0" Type="smallint" Nullable="false" />
+          <Property Name="DISCRGREN6_0" Type="smallint" Nullable="false" />
+          <Property Name="DISCRGREN7_0" Type="smallint" Nullable="false" />
+          <Property Name="DISCRGREN8_0" Type="smallint" Nullable="false" />
+          <Property Name="DISCRGREN9_0" Type="smallint" Nullable="false" />
+          <Property Name="VAT_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="VAT_1" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="VAT_2" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="CLCAMT1_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="CLCAMT2_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="SAU_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="STU_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="SAUSTUCOE_0" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="TSICOD_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TSICOD_1" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TSICOD_2" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TSICOD_3" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TSICOD_4" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="SOQSTA_0" Type="tinyint" Nullable="false" />
+          <Property Name="LINTYP_0" Type="tinyint" Nullable="false" />
+          <Property Name="FOCFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="ORILIN_0" Type="int" Nullable="false" />
+          <Property Name="SQHNUM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CONNUM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="SQDLIN_0" Type="int" Nullable="false" />
+          <Property Name="LINREVNUM_0" Type="smallint" Nullable="false" />
+          <Property Name="EXPNUM_0" Type="int" Nullable="false" />
+          <Property Name="CREUSR_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="CREDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="UPDUSR_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="UPDDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="ZVENPRICE_0" Type="numeric" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="ROWID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="SORDERQ">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="SOHNUM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="SOPLIN_0" Type="int" Nullable="false" />
+          <Property Name="SOQSEQ_0" Type="int" Nullable="false" />
+          <Property Name="CPY_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="SOHCAT_0" Type="tinyint" Nullable="false" />
+          <Property Name="SALFCY_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="BPCORD_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="BPAADD_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="ITMREF_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="STOFCY_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="USEPLC_0" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="CAD_0" Type="tinyint" Nullable="false" />
+          <Property Name="YEA_0" Type="smallint" Nullable="false" />
+          <Property Name="MON_0" Type="smallint" Nullable="false" />
+          <Property Name="DLVDAY_0" Type="smallint" Nullable="false" />
+          <Property Name="WEE_0" Type="smallint" Nullable="false" />
+          <Property Name="ORDDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="DEMDLVDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="DEMDLVHOU_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="DEMDLVREF_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="IMPNUMLIG_0" Type="int" Nullable="false" />
+          <Property Name="SHIDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="SHIHOU_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="EXTDLVDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="SOQSTA_0" Type="tinyint" Nullable="false" />
+          <Property Name="INVFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="DEMSTA_0" Type="tinyint" Nullable="false" />
+          <Property Name="DEMNUM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="STOMGTCOD_0" Type="tinyint" Nullable="false" />
+          <Property Name="LOT_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="STA_0" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="LOC_0" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="ALLTYP_0" Type="tinyint" Nullable="false" />
+          <Property Name="DSPLINFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="DDTANUM_0" Type="smallint" Nullable="false" />
+          <Property Name="DDTANUM_1" Type="smallint" Nullable="false" />
+          <Property Name="DDTANUM_2" Type="smallint" Nullable="false" />
+          <Property Name="DDTANUM_3" Type="smallint" Nullable="false" />
+          <Property Name="DDTANUM_4" Type="smallint" Nullable="false" />
+          <Property Name="DDTANUM_5" Type="smallint" Nullable="false" />
+          <Property Name="DDTANUM_6" Type="smallint" Nullable="false" />
+          <Property Name="DDTANUM_7" Type="smallint" Nullable="false" />
+          <Property Name="DDTANUM_8" Type="smallint" Nullable="false" />
+          <Property Name="DDTANOT_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_1" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_2" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_3" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_4" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_5" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_6" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_7" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_8" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="ORIQTY_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="QTY_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="SHTQTY_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="ALLQTY_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="ODLQTY_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="DLVQTY_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="INVQTY_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="TDLQTY_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="LPRQTY_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="OPRQTY_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="PREQTY_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="QTYSTU_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="SHTQTYSTU_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="ALLQTYSTU_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="ODLQTYSTU_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="DLVQTYSTU_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="INVQTYSTU_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="TDLQTYSTU_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="LPRQTYSTU_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="OPRQTYSTU_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="PREQTYSTU_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="PRECOD_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="DRN_0" Type="tinyint" Nullable="false" />
+          <Property Name="DLVPIO_0" Type="tinyint" Nullable="false" />
+          <Property Name="DLVPIOCMP_0" Type="smallint" Nullable="false" />
+          <Property Name="BPTNUM_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="MDL_0" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="DAYLTI_0" Type="smallint" Nullable="false" />
+          <Property Name="PCK_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="PCKCAP_0" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="SOQTEX_0" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="SDHNUM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="SDDLIN_0" Type="int" Nullable="false" />
+          <Property Name="FMI_0" Type="tinyint" Nullable="false" />
+          <Property Name="FMINUM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="FMILIN_0" Type="int" Nullable="false" />
+          <Property Name="FMISEQ_0" Type="int" Nullable="false" />
+          <Property Name="POHNUM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="POPLIN_0" Type="int" Nullable="false" />
+          <Property Name="POQSEQ_0" Type="int" Nullable="false" />
+          <Property Name="PERSTRDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="PERENDDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="PERNBRDAY_0" Type="smallint" Nullable="false" />
+          <Property Name="GEOCOD_0" Type="nvarchar" Nullable="false" MaxLength="9" />
+          <Property Name="INSCTYFLG_0" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="VTS_0" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="VTC_0" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="TAXGEOFLG_0" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="TAXFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="TAXREGFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="RATTAXLIN_0" Type="numeric" Nullable="false" Precision="8" Scale="3" />
+          <Property Name="BASTAXLIN_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="OCNPRNBOM_0" Type="tinyint" Nullable="false" />
+          <Property Name="NDEPRNBOM_0" Type="tinyint" Nullable="false" />
+          <Property Name="INVPRNBOM_0" Type="tinyint" Nullable="false" />
+          <Property Name="CCLREN_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CCLDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="PITFLG_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="EXPNUM_0" Type="int" Nullable="false" />
+          <Property Name="DSPLINWEI_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="DSPLINVOL_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="DSPWEU_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DSPVOU_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="CREUSR_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="CREDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="UPDUSR_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="UPDDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="XB_HLDCOD_0" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="ROWID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="STOJOU">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="STOFCY_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="UPDCOD_0" Type="tinyint" Nullable="false" />
+          <Property Name="ITMREF_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="IPTDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="MVTSEQ_0" Type="int" Nullable="false" />
+          <Property Name="MVTIND_0" Type="int" Nullable="false" />
+          <Property Name="CSTDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="CSTTIM_0" Type="nvarchar" Nullable="false" MaxLength="8" />
+          <Property Name="CSTCOU_0" Type="numeric" Nullable="false" Precision="11" Scale="1" />
+          <Property Name="OWNER_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="LOT_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="SLO_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="BPSLOT_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="LOC_0" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="WRH_0" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="SERNUM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TRSTYP_0" Type="tinyint" Nullable="false" />
+          <Property Name="TRSFAM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="MVTDES_0" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="PJT_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="BPRNUM_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="VCRTYP_0" Type="tinyint" Nullable="false" />
+          <Property Name="VCRNUM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="VCRLIN_0" Type="int" Nullable="false" />
+          <Property Name="VCRTYPORI_0" Type="tinyint" Nullable="false" />
+          <Property Name="VCRNUMORI_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="VCRLINORI_0" Type="int" Nullable="false" />
+          <Property Name="VCRSEQORI_0" Type="int" Nullable="false" />
+          <Property Name="VCRTYPREG_0" Type="tinyint" Nullable="false" />
+          <Property Name="VCRNUMREG_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="VCRLINREG_0" Type="int" Nullable="false" />
+          <Property Name="USRFLD1_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="USRFLD2_0" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="USRFLD3_0" Type="numeric" Nullable="false" Precision="11" Scale="1" />
+          <Property Name="USRFLD4_0" Type="datetime" Nullable="false" />
+          <Property Name="PCU_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="QTYPCU_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="PCUSTUCOE_0" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="QTYSTU_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="STU_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="PCUORI_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="PCUSTUORI_0" Type="numeric" Nullable="false" Scale="7" />
+          <Property Name="AMTORD_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="AMTVAL_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="VARORD_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="VARVAL_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="PRIORD_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="PRIVAL_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="PRINAT_0" Type="tinyint" Nullable="false" />
+          <Property Name="AMTVAL2_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="VARVAL2_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="PRIVAL2_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="PRINAT2_0" Type="tinyint" Nullable="false" />
+          <Property Name="PRIREGFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="AMTDEV_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="AMTDEV2_0" Type="numeric" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="SHLDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="STA_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="POT_0" Type="numeric" Nullable="false" Precision="14" Scale="5" />
+          <Property Name="ACT_0" Type="numeric" Nullable="false" Precision="14" Scale="5" />
+          <Property Name="ACTQTY_0" Type="numeric" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="QLYCTLDEM_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="PRNFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="REGFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="LBEFMT_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="LBENBR_0" Type="smallint" Nullable="false" />
+          <Property Name="DIE_0" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_1" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_2" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_3" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_4" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_5" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_6" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_7" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_8" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_9" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_10" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_11" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_12" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_13" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_14" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_15" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_16" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_17" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_18" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DIE_19" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="CCE_0" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_1" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_2" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_3" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_4" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_5" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_6" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_7" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_8" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_9" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_10" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_11" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_12" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_13" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_14" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_15" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_16" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_17" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_18" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="CCE_19" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="ENTCOD_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="FINRSPFCY_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="AGGIFAFLG_0" Type="tinyint" Nullable="false" />
+          <Property Name="GTE_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="NUMVCR_0" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="PALNUM_0" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="CTRNUM_0" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="BETCPY_0" Type="tinyint" Nullable="false" />
+          <Property Name="DLUDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="NEWLTIDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="CREMVTDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="CREMVTTIM_0" Type="nvarchar" Nullable="false" MaxLength="8" />
+          <Property Name="CREMVTSEQ_0" Type="int" Nullable="false" />
+          <Property Name="EXPNUM_0" Type="int" Nullable="false" />
+          <Property Name="PRONUM_0" Type="int" Nullable="false" />
+          <Property Name="CREDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="CRETIM_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="CREUSR_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="UPDDAT_0" Type="datetime" Nullable="false" />
+          <Property Name="UPDUSR_0" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="ROWID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="x3v6Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="Sage_x3v6Entities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="ITMMASTERs" EntityType="x3v6Model.ITMMASTER" />
+          <EntitySet Name="SORDERPs" EntityType="x3v6Model.SORDERP" />
+          <EntitySet Name="SORDERQs" EntityType="x3v6Model.SORDERQ" />
+          <EntitySet Name="STOJOUs" EntityType="x3v6Model.STOJOU" />
+        </EntityContainer>
+        <EntityType Name="ITMMASTER">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="ITMREF_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TSICOD_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TSICOD_1" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TSICOD_2" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TSICOD_3" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TSICOD_4" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TCLCOD_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="SEAKEY_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_1" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_2" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_3" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_4" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_5" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_6" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_7" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_8" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_9" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_10" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_11" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_12" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_13" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_14" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_15" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_16" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_17" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_18" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DIE_19" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_0" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_1" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_2" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_3" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_4" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_5" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_6" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_7" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_8" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_9" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_10" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_11" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_12" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_13" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_14" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_15" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_16" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_17" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_18" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CCE_19" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="ACCCOD_0" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ITMDES1_0" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="ITMDES2_0" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="ITMDES3_0" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="STDFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="ITMSTD_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="EANCOD_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ITMSTA_0" Type="Byte" Nullable="false" />
+          <Property Name="DEFPOT_0" Type="Decimal" Nullable="false" Precision="14" Scale="5" />
+          <Property Name="DEFACT_0" Type="Decimal" Nullable="false" Precision="14" Scale="5" />
+          <Property Name="LIFSTRDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LIFENDDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="STOCRD_0" Type="String" Nullable="false" MaxLength="8" Unicode="true" FixedLength="false" />
+          <Property Name="STU_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PUU_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="SAU_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="SSU_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="EEU_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PUUSTUCOE_0" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="DACPUUCOE_0" Type="Byte" Nullable="false" />
+          <Property Name="SAUSTUCOE_0" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="DACSAUCOE_0" Type="Byte" Nullable="false" />
+          <Property Name="SSUSTUCOE_0" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="EEUSTUCOE_0" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="WEU_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="ITMWEI_0" Type="Decimal" Nullable="false" Precision="13" Scale="4" />
+          <Property Name="VOU_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="ITMVOU_0" Type="Decimal" Nullable="false" Precision="12" Scale="4" />
+          <Property Name="PCU_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PCU_1" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PCU_2" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PCU_3" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PCU_4" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PCU_5" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PCU_6" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PCU_7" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PCU_8" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PCU_9" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PCUSTUCOE_0" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="PCUSTUCOE_1" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="PCUSTUCOE_2" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="PCUSTUCOE_3" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="PCUSTUCOE_4" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="PCUSTUCOE_5" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="PCUSTUCOE_6" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="PCUSTUCOE_7" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="PCUSTUCOE_8" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="PCUSTUCOE_9" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="DACPCUCOE_0" Type="Byte" Nullable="false" />
+          <Property Name="DACPCUCOE_1" Type="Byte" Nullable="false" />
+          <Property Name="DACPCUCOE_2" Type="Byte" Nullable="false" />
+          <Property Name="DACPCUCOE_3" Type="Byte" Nullable="false" />
+          <Property Name="DACPCUCOE_4" Type="Byte" Nullable="false" />
+          <Property Name="DACPCUCOE_5" Type="Byte" Nullable="false" />
+          <Property Name="DACPCUCOE_6" Type="Byte" Nullable="false" />
+          <Property Name="DACPCUCOE_7" Type="Byte" Nullable="false" />
+          <Property Name="DACPCUCOE_8" Type="Byte" Nullable="false" />
+          <Property Name="DACPCUCOE_9" Type="Byte" Nullable="false" />
+          <Property Name="PCURUL_0" Type="Byte" Nullable="false" />
+          <Property Name="PCURUL_1" Type="Byte" Nullable="false" />
+          <Property Name="PCURUL_2" Type="Byte" Nullable="false" />
+          <Property Name="PCURUL_3" Type="Byte" Nullable="false" />
+          <Property Name="PCURUL_4" Type="Byte" Nullable="false" />
+          <Property Name="PCURUL_5" Type="Byte" Nullable="false" />
+          <Property Name="PCURUL_6" Type="Byte" Nullable="false" />
+          <Property Name="PCURUL_7" Type="Byte" Nullable="false" />
+          <Property Name="PCURUL_8" Type="Byte" Nullable="false" />
+          <Property Name="PCURUL_9" Type="Byte" Nullable="false" />
+          <Property Name="LBEFMT_0" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="LBEFMT_1" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="LBEFMT_2" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="LBEFMT_3" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="LBEFMT_4" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="LBEFMT_5" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="LBEFMT_6" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="LBEFMT_7" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="LBEFMT_8" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="LBEFMT_9" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="STOMGTCOD_0" Type="Byte" Nullable="false" />
+          <Property Name="LOTMGTCOD_0" Type="Byte" Nullable="false" />
+          <Property Name="LOTCOU_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="SERCOU_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="SERMGTCOD_0" Type="Byte" Nullable="false" />
+          <Property Name="EXYMGTCOD_0" Type="Byte" Nullable="false" />
+          <Property Name="EXYSTA_0" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="SHL_0" Type="Int16" Nullable="false" />
+          <Property Name="SHLLTI_0" Type="Int16" Nullable="false" />
+          <Property Name="NEGSTO_0" Type="Byte" Nullable="false" />
+          <Property Name="CSTGRP_0" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="BRDCOD_0" Type="Byte" Nullable="false" />
+          <Property Name="PLAACS_0" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="RPLITM_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="EECGES_0" Type="Byte" Nullable="false" />
+          <Property Name="CUSREF_0" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="VACITM_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="VACITM_1" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="VACITM_2" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FRTHORUOM_0" Type="Byte" Nullable="false" />
+          <Property Name="FRTHOR_0" Type="Int16" Nullable="false" />
+          <Property Name="FIMHOR_0" Type="Int16" Nullable="false" />
+          <Property Name="FIMHORUOM_0" Type="Byte" Nullable="false" />
+          <Property Name="BUY_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="PLANNER_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="OFS_0" Type="Int16" Nullable="false" />
+          <Property Name="MINRMNPRC_0" Type="Decimal" Nullable="false" Precision="8" Scale="3" />
+          <Property Name="RCPFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="PRQFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="PURTEX_0" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="MFGTEX_0" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="ITMEXNFLG_0" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="STATAXFLG_0" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="CFGLIN_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="CFGFLDNUM1_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="CFGFLDNUM2_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="CFGFLDNUM3_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="CFGFLDNUM4_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="CFGFLDNUM5_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="CFGFLDNUM6_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="CFGFLDALP1_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CFGFLDALP2_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CFGFLDALP3_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CFGFLDALP4_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CFGFLDALP5_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CFGFLDALP6_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CFGVCRNUM_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CFGBPRNUM_0" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CFGBPRREF_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CFGITMREF_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CFGDELDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CREMAC_0" Type="Byte" Nullable="false" />
+          <Property Name="FLYCAT_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TPLCONLND_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TPLCONGUA_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TPLCONSRV_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="PITCDT_0" Type="Int32" Nullable="false" />
+          <Property Name="PITCDTUOM_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="STULBEFMT_0" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="ALTBOMHDK_0" Type="Int16" Nullable="false" />
+          <Property Name="HDKITMTYP_0" Type="Byte" Nullable="false" />
+          <Property Name="STOISSDEF_0" Type="Byte" Nullable="false" />
+          <Property Name="DAYUOM_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="HOUUOM_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="MNTUOM_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DTY_0" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="TRKCOD_0" Type="Byte" Nullable="false" />
+          <Property Name="PURFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="MFGFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="SCPFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="SCSFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="PHAFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="GENFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="TOOFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="DLVFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="SALFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="INTFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="FLGFAS_0" Type="Byte" Nullable="false" />
+          <Property Name="NEWLTISTA_0" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="DLU_0" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="XC_SCLASS_0" Type="Byte" Nullable="false" />
+          <Property Name="SHLUOM_0" Type="Byte" Nullable="false" />
+          <Property Name="SHLLTIUOM_0" Type="Byte" Nullable="false" />
+          <Property Name="EXPNUM_0" Type="Int32" Nullable="false" />
+          <Property Name="CREDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CREUSR_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="UPDDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UPDUSR_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="XC_MATTOT_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="STAFED_0" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="PLMITMREF_0" Type="String" Nullable="false" MaxLength="70" Unicode="true" FixedLength="false" />
+          <Property Name="PLMATTURL_0" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="PLMHISURL_0" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="CRESTP_0" Type="String" Nullable="false" MaxLength="14" Unicode="true" FixedLength="false" />
+          <Property Name="UPDSTP_0" Type="String" Nullable="false" MaxLength="14" Unicode="true" FixedLength="false" />
+          <Property Name="IDTSGL_0" Type="String" Nullable="false" MaxLength="36" Unicode="true" FixedLength="false" />
+          <Property Name="XDUTCOD_0" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="XC_PCKTYP_0" Type="Byte" Nullable="false" />
+          <Property Name="XC_NMFC_0" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="XC_ADDHNDL_0" Type="Int16" Nullable="false" />
+          <Property Name="XC_OVRSZ_0" Type="Int16" Nullable="false" />
+          <Property Name="XC_FRTUNITS_0" Type="Decimal" Nullable="false" Precision="28" Scale="8" />
+          <Property Name="XA_VOLUOM_0" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="XB_FRTCLS_0" Type="Byte" Nullable="false" />
+          <Property Name="XA_ITMURL_0" Type="String" Nullable="false" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="XA_WID_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="XA_HEI_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="XA_DTH_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="XA_PRDVOL_0" Type="Decimal" Nullable="false" Precision="12" Scale="4" />
+          <Property Name="XA_ALGITM_0" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="XA_ALGITMCON_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ZITMDES4_0" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ROWID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="SORDERP">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="SOHNUM_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="SOPLIN_0" Type="Int32" Nullable="false" />
+          <Property Name="SOPSEQ_0" Type="Int32" Nullable="false" />
+          <Property Name="CPY_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="SOHCAT_0" Type="Byte" Nullable="false" />
+          <Property Name="STRDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ENDDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BPCORD_0" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="BPAADD_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="CNDNAM_0" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="BPCINV_0" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="STOFCY_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="SALFCY_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="ITMREF_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ITMDES1_0" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="ITMDES_0" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="ITMREFBPC_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="VACITM_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="VACITM_1" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="VACITM_2" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="REP1_0" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="REP2_0" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="REPRAT1_0" Type="Decimal" Nullable="false" Precision="8" Scale="3" />
+          <Property Name="REPRAT2_0" Type="Decimal" Nullable="false" Precision="8" Scale="3" />
+          <Property Name="REPCOE_0" Type="Decimal" Nullable="false" Precision="6" Scale="3" />
+          <Property Name="GROPRI_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="PRIREN_0" Type="Int16" Nullable="false" />
+          <Property Name="NETPRI_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="NETPRINOT_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="NETPRIATI_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="PFM_0" Type="Decimal" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="CPRPRI_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL1_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL2_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL3_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL4_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL5_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL6_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL7_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL8_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGVAL9_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="DISCRGREN1_0" Type="Int16" Nullable="false" />
+          <Property Name="DISCRGREN2_0" Type="Int16" Nullable="false" />
+          <Property Name="DISCRGREN3_0" Type="Int16" Nullable="false" />
+          <Property Name="DISCRGREN4_0" Type="Int16" Nullable="false" />
+          <Property Name="DISCRGREN5_0" Type="Int16" Nullable="false" />
+          <Property Name="DISCRGREN6_0" Type="Int16" Nullable="false" />
+          <Property Name="DISCRGREN7_0" Type="Int16" Nullable="false" />
+          <Property Name="DISCRGREN8_0" Type="Int16" Nullable="false" />
+          <Property Name="DISCRGREN9_0" Type="Int16" Nullable="false" />
+          <Property Name="VAT_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="VAT_1" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="VAT_2" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="CLCAMT1_0" Type="Decimal" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="CLCAMT2_0" Type="Decimal" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="SAU_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="STU_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="SAUSTUCOE_0" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="TSICOD_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TSICOD_1" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TSICOD_2" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TSICOD_3" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TSICOD_4" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="SOQSTA_0" Type="Byte" Nullable="false" />
+          <Property Name="LINTYP_0" Type="Byte" Nullable="false" />
+          <Property Name="FOCFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="ORILIN_0" Type="Int32" Nullable="false" />
+          <Property Name="SQHNUM_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CONNUM_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="SQDLIN_0" Type="Int32" Nullable="false" />
+          <Property Name="LINREVNUM_0" Type="Int16" Nullable="false" />
+          <Property Name="EXPNUM_0" Type="Int32" Nullable="false" />
+          <Property Name="CREUSR_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="CREDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UPDUSR_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="UPDDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ZVENPRICE_0" Type="Decimal" Nullable="false" Precision="19" Scale="5" />
+          <Property Name="ROWID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="SORDERQ">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Name="SOHNUM_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="SOPLIN_0" Type="Int32" Nullable="false" />
+          <Property Name="SOQSEQ_0" Type="Int32" Nullable="false" />
+          <Property Name="CPY_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="SOHCAT_0" Type="Byte" Nullable="false" />
+          <Property Name="SALFCY_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="BPCORD_0" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="BPAADD_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="ITMREF_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="STOFCY_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="USEPLC_0" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="CAD_0" Type="Byte" Nullable="false" />
+          <Property Name="YEA_0" Type="Int16" Nullable="false" />
+          <Property Name="MON_0" Type="Int16" Nullable="false" />
+          <Property Name="DLVDAY_0" Type="Int16" Nullable="false" />
+          <Property Name="WEE_0" Type="Int16" Nullable="false" />
+          <Property Name="ORDDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DEMDLVDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DEMDLVHOU_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="DEMDLVREF_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="IMPNUMLIG_0" Type="Int32" Nullable="false" />
+          <Property Name="SHIDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SHIHOU_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="EXTDLVDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SOQSTA_0" Type="Byte" Nullable="false" />
+          <Property Name="INVFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="DEMSTA_0" Type="Byte" Nullable="false" />
+          <Property Name="DEMNUM_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="STOMGTCOD_0" Type="Byte" Nullable="false" />
+          <Property Name="LOT_0" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="STA_0" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="LOC_0" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ALLTYP_0" Type="Byte" Nullable="false" />
+          <Property Name="DSPLINFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="DDTANUM_0" Type="Int16" Nullable="false" />
+          <Property Name="DDTANUM_1" Type="Int16" Nullable="false" />
+          <Property Name="DDTANUM_2" Type="Int16" Nullable="false" />
+          <Property Name="DDTANUM_3" Type="Int16" Nullable="false" />
+          <Property Name="DDTANUM_4" Type="Int16" Nullable="false" />
+          <Property Name="DDTANUM_5" Type="Int16" Nullable="false" />
+          <Property Name="DDTANUM_6" Type="Int16" Nullable="false" />
+          <Property Name="DDTANUM_7" Type="Int16" Nullable="false" />
+          <Property Name="DDTANUM_8" Type="Int16" Nullable="false" />
+          <Property Name="DDTANOT_0" Type="Decimal" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_1" Type="Decimal" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_2" Type="Decimal" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_3" Type="Decimal" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_4" Type="Decimal" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_5" Type="Decimal" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_6" Type="Decimal" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_7" Type="Decimal" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="DDTANOT_8" Type="Decimal" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="ORIQTY_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="QTY_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="SHTQTY_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="ALLQTY_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="ODLQTY_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="DLVQTY_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="INVQTY_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="TDLQTY_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="LPRQTY_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="OPRQTY_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="PREQTY_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="QTYSTU_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="SHTQTYSTU_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="ALLQTYSTU_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="ODLQTYSTU_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="DLVQTYSTU_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="INVQTYSTU_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="TDLQTYSTU_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="LPRQTYSTU_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="OPRQTYSTU_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="PREQTYSTU_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="PRECOD_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="DRN_0" Type="Byte" Nullable="false" />
+          <Property Name="DLVPIO_0" Type="Byte" Nullable="false" />
+          <Property Name="DLVPIOCMP_0" Type="Int16" Nullable="false" />
+          <Property Name="BPTNUM_0" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="MDL_0" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="DAYLTI_0" Type="Int16" Nullable="false" />
+          <Property Name="PCK_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="PCKCAP_0" Type="Decimal" Nullable="false" Precision="18" Scale="7" />
+          <Property Name="SOQTEX_0" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="SDHNUM_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="SDDLIN_0" Type="Int32" Nullable="false" />
+          <Property Name="FMI_0" Type="Byte" Nullable="false" />
+          <Property Name="FMINUM_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FMILIN_0" Type="Int32" Nullable="false" />
+          <Property Name="FMISEQ_0" Type="Int32" Nullable="false" />
+          <Property Name="POHNUM_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="POPLIN_0" Type="Int32" Nullable="false" />
+          <Property Name="POQSEQ_0" Type="Int32" Nullable="false" />
+          <Property Name="PERSTRDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PERENDDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PERNBRDAY_0" Type="Int16" Nullable="false" />
+          <Property Name="GEOCOD_0" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+          <Property Name="INSCTYFLG_0" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="VTS_0" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="VTC_0" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="TAXGEOFLG_0" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="TAXFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="TAXREGFLG_0" Type="Byte" Nullable="false" />
+          <Property Name="RATTAXLIN_0" Type="Decimal" Nullable="false" Precision="8" Scale="3" />
+          <Property Name="BASTAXLIN_0" Type="Decimal" Nullable="false" Precision="27" Scale="13" />
+          <Property Name="OCNPRNBOM_0" Type="Byte" Nullable="false" />
+          <Property Name="NDEPRNBOM_0" Type="Byte" Nullable="false" />
+          <Property Name="INVPRNBOM_0" Type="Byte" Nullable="false" />
+          <Property Name="CCLREN_0" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CCLDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PITFLG_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="EXPNUM_0" Type="Int32" Nullable="false" />
+          <Property Name="DSPLINWEI_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="DSPLINVOL_0" Type="Decimal" Nullable="false" Precision="28" Scale="13" />
+          <Property Name="DSPWEU_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DSPVOU_0" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="CREUSR_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="CREDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UPDUSR_0" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="UPDDAT_0" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="XB_HLDCOD_0" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ROWID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="STOJOU">
+          <Key>
+            <PropertyRef Name="ROWID" />
+          </Key>
+          <Property Type="String" Name="STOFCY_0" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="UPDCOD_0" Nullable="false" />
+          <Property Type="String" Name="ITMREF_0" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="IPTDAT_0" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="MVTSEQ_0" Nullable="false" />
+          <Property Type="Int32" Name="MVTIND_0" Nullable="false" />
+          <Property Type="DateTime" Name="CSTDAT_0" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CSTTIM_0" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="CSTCOU_0" Nullable="false" Precision="11" Scale="1" />
+          <Property Type="String" Name="OWNER_0" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LOT_0" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SLO_0" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BPSLOT_0" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LOC_0" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WRH_0" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SERNUM_0" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="TRSTYP_0" Nullable="false" />
+          <Property Type="String" Name="TRSFAM_0" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MVTDES_0" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PJT_0" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BPRNUM_0" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="VCRTYP_0" Nullable="false" />
+          <Property Type="String" Name="VCRNUM_0" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="VCRLIN_0" Nullable="false" />
+          <Property Type="Byte" Name="VCRTYPORI_0" Nullable="false" />
+          <Property Type="String" Name="VCRNUMORI_0" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="VCRLINORI_0" Nullable="false" />
+          <Property Type="Int32" Name="VCRSEQORI_0" Nullable="false" />
+          <Property Type="Byte" Name="VCRTYPREG_0" Nullable="false" />
+          <Property Type="String" Name="VCRNUMREG_0" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="VCRLINREG_0" Nullable="false" />
+          <Property Type="String" Name="USRFLD1_0" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="USRFLD2_0" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="USRFLD3_0" Nullable="false" Precision="11" Scale="1" />
+          <Property Type="DateTime" Name="USRFLD4_0" Nullable="false" Precision="3" />
+          <Property Type="String" Name="PCU_0" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="QTYPCU_0" Nullable="false" Precision="28" Scale="13" />
+          <Property Type="Decimal" Name="PCUSTUCOE_0" Nullable="false" Precision="18" Scale="7" />
+          <Property Type="Decimal" Name="QTYSTU_0" Nullable="false" Precision="28" Scale="13" />
+          <Property Type="String" Name="STU_0" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PCUORI_0" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="PCUSTUORI_0" Nullable="false" Precision="18" Scale="7" />
+          <Property Type="Decimal" Name="AMTORD_0" Nullable="false" Precision="27" Scale="13" />
+          <Property Type="Decimal" Name="AMTVAL_0" Nullable="false" Precision="27" Scale="13" />
+          <Property Type="Decimal" Name="VARORD_0" Nullable="false" Precision="27" Scale="13" />
+          <Property Type="Decimal" Name="VARVAL_0" Nullable="false" Precision="27" Scale="13" />
+          <Property Type="Decimal" Name="PRIORD_0" Nullable="false" Precision="27" Scale="13" />
+          <Property Type="Decimal" Name="PRIVAL_0" Nullable="false" Precision="27" Scale="13" />
+          <Property Type="Byte" Name="PRINAT_0" Nullable="false" />
+          <Property Type="Decimal" Name="AMTVAL2_0" Nullable="false" Precision="27" Scale="13" />
+          <Property Type="Decimal" Name="VARVAL2_0" Nullable="false" Precision="27" Scale="13" />
+          <Property Type="Decimal" Name="PRIVAL2_0" Nullable="false" Precision="27" Scale="13" />
+          <Property Type="Byte" Name="PRINAT2_0" Nullable="false" />
+          <Property Type="Byte" Name="PRIREGFLG_0" Nullable="false" />
+          <Property Type="Decimal" Name="AMTDEV_0" Nullable="false" Precision="27" Scale="13" />
+          <Property Type="Decimal" Name="AMTDEV2_0" Nullable="false" Precision="27" Scale="13" />
+          <Property Type="DateTime" Name="SHLDAT_0" Nullable="false" Precision="3" />
+          <Property Type="String" Name="STA_0" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="POT_0" Nullable="false" Precision="14" Scale="5" />
+          <Property Type="Decimal" Name="ACT_0" Nullable="false" Precision="14" Scale="5" />
+          <Property Type="Decimal" Name="ACTQTY_0" Nullable="false" Precision="28" Scale="13" />
+          <Property Type="String" Name="QLYCTLDEM_0" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="PRNFLG_0" Nullable="false" />
+          <Property Type="Byte" Name="REGFLG_0" Nullable="false" />
+          <Property Type="String" Name="LBEFMT_0" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="Int16" Name="LBENBR_0" Nullable="false" />
+          <Property Type="String" Name="DIE_0" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_1" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_2" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_3" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_4" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_5" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_6" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_7" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_8" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_9" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_10" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_11" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_12" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_13" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_14" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_15" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_16" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_17" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_18" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DIE_19" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_0" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_1" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_2" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_3" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_4" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_5" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_6" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_7" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_8" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_9" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_10" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_11" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_12" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_13" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_14" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_15" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_16" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_17" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_18" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCE_19" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ENTCOD_0" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FINRSPFCY_0" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="AGGIFAFLG_0" Nullable="false" />
+          <Property Type="String" Name="GTE_0" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NUMVCR_0" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PALNUM_0" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CTRNUM_0" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="BETCPY_0" Nullable="false" />
+          <Property Type="DateTime" Name="DLUDAT_0" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="NEWLTIDAT_0" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="CREMVTDAT_0" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CREMVTTIM_0" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CREMVTSEQ_0" Nullable="false" />
+          <Property Type="Int32" Name="EXPNUM_0" Nullable="false" />
+          <Property Type="Int32" Name="PRONUM_0" Nullable="false" />
+          <Property Type="DateTime" Name="CREDAT_0" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CRETIM_0" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CREUSR_0" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="UPDDAT_0" Nullable="false" Precision="3" />
+          <Property Type="String" Name="UPDUSR_0" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ROWID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="x3v6ModelStoreContainer" CdmEntityContainer="Sage_x3v6Entities">
+          <EntitySetMapping Name="ITMMASTERs">
+            <EntityTypeMapping TypeName="x3v6Model.ITMMASTER">
+              <MappingFragment StoreEntitySet="ITMMASTER">
+                <ScalarProperty Name="ITMREF_0" ColumnName="ITMREF_0" />
+                <ScalarProperty Name="TSICOD_0" ColumnName="TSICOD_0" />
+                <ScalarProperty Name="TSICOD_1" ColumnName="TSICOD_1" />
+                <ScalarProperty Name="TSICOD_2" ColumnName="TSICOD_2" />
+                <ScalarProperty Name="TSICOD_3" ColumnName="TSICOD_3" />
+                <ScalarProperty Name="TSICOD_4" ColumnName="TSICOD_4" />
+                <ScalarProperty Name="TCLCOD_0" ColumnName="TCLCOD_0" />
+                <ScalarProperty Name="SEAKEY_0" ColumnName="SEAKEY_0" />
+                <ScalarProperty Name="DIE_0" ColumnName="DIE_0" />
+                <ScalarProperty Name="DIE_1" ColumnName="DIE_1" />
+                <ScalarProperty Name="DIE_2" ColumnName="DIE_2" />
+                <ScalarProperty Name="DIE_3" ColumnName="DIE_3" />
+                <ScalarProperty Name="DIE_4" ColumnName="DIE_4" />
+                <ScalarProperty Name="DIE_5" ColumnName="DIE_5" />
+                <ScalarProperty Name="DIE_6" ColumnName="DIE_6" />
+                <ScalarProperty Name="DIE_7" ColumnName="DIE_7" />
+                <ScalarProperty Name="DIE_8" ColumnName="DIE_8" />
+                <ScalarProperty Name="DIE_9" ColumnName="DIE_9" />
+                <ScalarProperty Name="DIE_10" ColumnName="DIE_10" />
+                <ScalarProperty Name="DIE_11" ColumnName="DIE_11" />
+                <ScalarProperty Name="DIE_12" ColumnName="DIE_12" />
+                <ScalarProperty Name="DIE_13" ColumnName="DIE_13" />
+                <ScalarProperty Name="DIE_14" ColumnName="DIE_14" />
+                <ScalarProperty Name="DIE_15" ColumnName="DIE_15" />
+                <ScalarProperty Name="DIE_16" ColumnName="DIE_16" />
+                <ScalarProperty Name="DIE_17" ColumnName="DIE_17" />
+                <ScalarProperty Name="DIE_18" ColumnName="DIE_18" />
+                <ScalarProperty Name="DIE_19" ColumnName="DIE_19" />
+                <ScalarProperty Name="CCE_0" ColumnName="CCE_0" />
+                <ScalarProperty Name="CCE_1" ColumnName="CCE_1" />
+                <ScalarProperty Name="CCE_2" ColumnName="CCE_2" />
+                <ScalarProperty Name="CCE_3" ColumnName="CCE_3" />
+                <ScalarProperty Name="CCE_4" ColumnName="CCE_4" />
+                <ScalarProperty Name="CCE_5" ColumnName="CCE_5" />
+                <ScalarProperty Name="CCE_6" ColumnName="CCE_6" />
+                <ScalarProperty Name="CCE_7" ColumnName="CCE_7" />
+                <ScalarProperty Name="CCE_8" ColumnName="CCE_8" />
+                <ScalarProperty Name="CCE_9" ColumnName="CCE_9" />
+                <ScalarProperty Name="CCE_10" ColumnName="CCE_10" />
+                <ScalarProperty Name="CCE_11" ColumnName="CCE_11" />
+                <ScalarProperty Name="CCE_12" ColumnName="CCE_12" />
+                <ScalarProperty Name="CCE_13" ColumnName="CCE_13" />
+                <ScalarProperty Name="CCE_14" ColumnName="CCE_14" />
+                <ScalarProperty Name="CCE_15" ColumnName="CCE_15" />
+                <ScalarProperty Name="CCE_16" ColumnName="CCE_16" />
+                <ScalarProperty Name="CCE_17" ColumnName="CCE_17" />
+                <ScalarProperty Name="CCE_18" ColumnName="CCE_18" />
+                <ScalarProperty Name="CCE_19" ColumnName="CCE_19" />
+                <ScalarProperty Name="ACCCOD_0" ColumnName="ACCCOD_0" />
+                <ScalarProperty Name="ITMDES1_0" ColumnName="ITMDES1_0" />
+                <ScalarProperty Name="ITMDES2_0" ColumnName="ITMDES2_0" />
+                <ScalarProperty Name="ITMDES3_0" ColumnName="ITMDES3_0" />
+                <ScalarProperty Name="STDFLG_0" ColumnName="STDFLG_0" />
+                <ScalarProperty Name="ITMSTD_0" ColumnName="ITMSTD_0" />
+                <ScalarProperty Name="EANCOD_0" ColumnName="EANCOD_0" />
+                <ScalarProperty Name="ITMSTA_0" ColumnName="ITMSTA_0" />
+                <ScalarProperty Name="DEFPOT_0" ColumnName="DEFPOT_0" />
+                <ScalarProperty Name="DEFACT_0" ColumnName="DEFACT_0" />
+                <ScalarProperty Name="LIFSTRDAT_0" ColumnName="LIFSTRDAT_0" />
+                <ScalarProperty Name="LIFENDDAT_0" ColumnName="LIFENDDAT_0" />
+                <ScalarProperty Name="STOCRD_0" ColumnName="STOCRD_0" />
+                <ScalarProperty Name="STU_0" ColumnName="STU_0" />
+                <ScalarProperty Name="PUU_0" ColumnName="PUU_0" />
+                <ScalarProperty Name="SAU_0" ColumnName="SAU_0" />
+                <ScalarProperty Name="SSU_0" ColumnName="SSU_0" />
+                <ScalarProperty Name="EEU_0" ColumnName="EEU_0" />
+                <ScalarProperty Name="PUUSTUCOE_0" ColumnName="PUUSTUCOE_0" />
+                <ScalarProperty Name="DACPUUCOE_0" ColumnName="DACPUUCOE_0" />
+                <ScalarProperty Name="SAUSTUCOE_0" ColumnName="SAUSTUCOE_0" />
+                <ScalarProperty Name="DACSAUCOE_0" ColumnName="DACSAUCOE_0" />
+                <ScalarProperty Name="SSUSTUCOE_0" ColumnName="SSUSTUCOE_0" />
+                <ScalarProperty Name="EEUSTUCOE_0" ColumnName="EEUSTUCOE_0" />
+                <ScalarProperty Name="WEU_0" ColumnName="WEU_0" />
+                <ScalarProperty Name="ITMWEI_0" ColumnName="ITMWEI_0" />
+                <ScalarProperty Name="VOU_0" ColumnName="VOU_0" />
+                <ScalarProperty Name="ITMVOU_0" ColumnName="ITMVOU_0" />
+                <ScalarProperty Name="PCU_0" ColumnName="PCU_0" />
+                <ScalarProperty Name="PCU_1" ColumnName="PCU_1" />
+                <ScalarProperty Name="PCU_2" ColumnName="PCU_2" />
+                <ScalarProperty Name="PCU_3" ColumnName="PCU_3" />
+                <ScalarProperty Name="PCU_4" ColumnName="PCU_4" />
+                <ScalarProperty Name="PCU_5" ColumnName="PCU_5" />
+                <ScalarProperty Name="PCU_6" ColumnName="PCU_6" />
+                <ScalarProperty Name="PCU_7" ColumnName="PCU_7" />
+                <ScalarProperty Name="PCU_8" ColumnName="PCU_8" />
+                <ScalarProperty Name="PCU_9" ColumnName="PCU_9" />
+                <ScalarProperty Name="PCUSTUCOE_0" ColumnName="PCUSTUCOE_0" />
+                <ScalarProperty Name="PCUSTUCOE_1" ColumnName="PCUSTUCOE_1" />
+                <ScalarProperty Name="PCUSTUCOE_2" ColumnName="PCUSTUCOE_2" />
+                <ScalarProperty Name="PCUSTUCOE_3" ColumnName="PCUSTUCOE_3" />
+                <ScalarProperty Name="PCUSTUCOE_4" ColumnName="PCUSTUCOE_4" />
+                <ScalarProperty Name="PCUSTUCOE_5" ColumnName="PCUSTUCOE_5" />
+                <ScalarProperty Name="PCUSTUCOE_6" ColumnName="PCUSTUCOE_6" />
+                <ScalarProperty Name="PCUSTUCOE_7" ColumnName="PCUSTUCOE_7" />
+                <ScalarProperty Name="PCUSTUCOE_8" ColumnName="PCUSTUCOE_8" />
+                <ScalarProperty Name="PCUSTUCOE_9" ColumnName="PCUSTUCOE_9" />
+                <ScalarProperty Name="DACPCUCOE_0" ColumnName="DACPCUCOE_0" />
+                <ScalarProperty Name="DACPCUCOE_1" ColumnName="DACPCUCOE_1" />
+                <ScalarProperty Name="DACPCUCOE_2" ColumnName="DACPCUCOE_2" />
+                <ScalarProperty Name="DACPCUCOE_3" ColumnName="DACPCUCOE_3" />
+                <ScalarProperty Name="DACPCUCOE_4" ColumnName="DACPCUCOE_4" />
+                <ScalarProperty Name="DACPCUCOE_5" ColumnName="DACPCUCOE_5" />
+                <ScalarProperty Name="DACPCUCOE_6" ColumnName="DACPCUCOE_6" />
+                <ScalarProperty Name="DACPCUCOE_7" ColumnName="DACPCUCOE_7" />
+                <ScalarProperty Name="DACPCUCOE_8" ColumnName="DACPCUCOE_8" />
+                <ScalarProperty Name="DACPCUCOE_9" ColumnName="DACPCUCOE_9" />
+                <ScalarProperty Name="PCURUL_0" ColumnName="PCURUL_0" />
+                <ScalarProperty Name="PCURUL_1" ColumnName="PCURUL_1" />
+                <ScalarProperty Name="PCURUL_2" ColumnName="PCURUL_2" />
+                <ScalarProperty Name="PCURUL_3" ColumnName="PCURUL_3" />
+                <ScalarProperty Name="PCURUL_4" ColumnName="PCURUL_4" />
+                <ScalarProperty Name="PCURUL_5" ColumnName="PCURUL_5" />
+                <ScalarProperty Name="PCURUL_6" ColumnName="PCURUL_6" />
+                <ScalarProperty Name="PCURUL_7" ColumnName="PCURUL_7" />
+                <ScalarProperty Name="PCURUL_8" ColumnName="PCURUL_8" />
+                <ScalarProperty Name="PCURUL_9" ColumnName="PCURUL_9" />
+                <ScalarProperty Name="LBEFMT_0" ColumnName="LBEFMT_0" />
+                <ScalarProperty Name="LBEFMT_1" ColumnName="LBEFMT_1" />
+                <ScalarProperty Name="LBEFMT_2" ColumnName="LBEFMT_2" />
+                <ScalarProperty Name="LBEFMT_3" ColumnName="LBEFMT_3" />
+                <ScalarProperty Name="LBEFMT_4" ColumnName="LBEFMT_4" />
+                <ScalarProperty Name="LBEFMT_5" ColumnName="LBEFMT_5" />
+                <ScalarProperty Name="LBEFMT_6" ColumnName="LBEFMT_6" />
+                <ScalarProperty Name="LBEFMT_7" ColumnName="LBEFMT_7" />
+                <ScalarProperty Name="LBEFMT_8" ColumnName="LBEFMT_8" />
+                <ScalarProperty Name="LBEFMT_9" ColumnName="LBEFMT_9" />
+                <ScalarProperty Name="STOMGTCOD_0" ColumnName="STOMGTCOD_0" />
+                <ScalarProperty Name="LOTMGTCOD_0" ColumnName="LOTMGTCOD_0" />
+                <ScalarProperty Name="LOTCOU_0" ColumnName="LOTCOU_0" />
+                <ScalarProperty Name="SERCOU_0" ColumnName="SERCOU_0" />
+                <ScalarProperty Name="SERMGTCOD_0" ColumnName="SERMGTCOD_0" />
+                <ScalarProperty Name="EXYMGTCOD_0" ColumnName="EXYMGTCOD_0" />
+                <ScalarProperty Name="EXYSTA_0" ColumnName="EXYSTA_0" />
+                <ScalarProperty Name="SHL_0" ColumnName="SHL_0" />
+                <ScalarProperty Name="SHLLTI_0" ColumnName="SHLLTI_0" />
+                <ScalarProperty Name="NEGSTO_0" ColumnName="NEGSTO_0" />
+                <ScalarProperty Name="CSTGRP_0" ColumnName="CSTGRP_0" />
+                <ScalarProperty Name="BRDCOD_0" ColumnName="BRDCOD_0" />
+                <ScalarProperty Name="PLAACS_0" ColumnName="PLAACS_0" />
+                <ScalarProperty Name="RPLITM_0" ColumnName="RPLITM_0" />
+                <ScalarProperty Name="EECGES_0" ColumnName="EECGES_0" />
+                <ScalarProperty Name="CUSREF_0" ColumnName="CUSREF_0" />
+                <ScalarProperty Name="VACITM_0" ColumnName="VACITM_0" />
+                <ScalarProperty Name="VACITM_1" ColumnName="VACITM_1" />
+                <ScalarProperty Name="VACITM_2" ColumnName="VACITM_2" />
+                <ScalarProperty Name="FRTHORUOM_0" ColumnName="FRTHORUOM_0" />
+                <ScalarProperty Name="FRTHOR_0" ColumnName="FRTHOR_0" />
+                <ScalarProperty Name="FIMHOR_0" ColumnName="FIMHOR_0" />
+                <ScalarProperty Name="FIMHORUOM_0" ColumnName="FIMHORUOM_0" />
+                <ScalarProperty Name="BUY_0" ColumnName="BUY_0" />
+                <ScalarProperty Name="PLANNER_0" ColumnName="PLANNER_0" />
+                <ScalarProperty Name="OFS_0" ColumnName="OFS_0" />
+                <ScalarProperty Name="MINRMNPRC_0" ColumnName="MINRMNPRC_0" />
+                <ScalarProperty Name="RCPFLG_0" ColumnName="RCPFLG_0" />
+                <ScalarProperty Name="PRQFLG_0" ColumnName="PRQFLG_0" />
+                <ScalarProperty Name="PURTEX_0" ColumnName="PURTEX_0" />
+                <ScalarProperty Name="MFGTEX_0" ColumnName="MFGTEX_0" />
+                <ScalarProperty Name="ITMEXNFLG_0" ColumnName="ITMEXNFLG_0" />
+                <ScalarProperty Name="STATAXFLG_0" ColumnName="STATAXFLG_0" />
+                <ScalarProperty Name="CFGLIN_0" ColumnName="CFGLIN_0" />
+                <ScalarProperty Name="CFGFLDNUM1_0" ColumnName="CFGFLDNUM1_0" />
+                <ScalarProperty Name="CFGFLDNUM2_0" ColumnName="CFGFLDNUM2_0" />
+                <ScalarProperty Name="CFGFLDNUM3_0" ColumnName="CFGFLDNUM3_0" />
+                <ScalarProperty Name="CFGFLDNUM4_0" ColumnName="CFGFLDNUM4_0" />
+                <ScalarProperty Name="CFGFLDNUM5_0" ColumnName="CFGFLDNUM5_0" />
+                <ScalarProperty Name="CFGFLDNUM6_0" ColumnName="CFGFLDNUM6_0" />
+                <ScalarProperty Name="CFGFLDALP1_0" ColumnName="CFGFLDALP1_0" />
+                <ScalarProperty Name="CFGFLDALP2_0" ColumnName="CFGFLDALP2_0" />
+                <ScalarProperty Name="CFGFLDALP3_0" ColumnName="CFGFLDALP3_0" />
+                <ScalarProperty Name="CFGFLDALP4_0" ColumnName="CFGFLDALP4_0" />
+                <ScalarProperty Name="CFGFLDALP5_0" ColumnName="CFGFLDALP5_0" />
+                <ScalarProperty Name="CFGFLDALP6_0" ColumnName="CFGFLDALP6_0" />
+                <ScalarProperty Name="CFGVCRNUM_0" ColumnName="CFGVCRNUM_0" />
+                <ScalarProperty Name="CFGBPRNUM_0" ColumnName="CFGBPRNUM_0" />
+                <ScalarProperty Name="CFGBPRREF_0" ColumnName="CFGBPRREF_0" />
+                <ScalarProperty Name="CFGITMREF_0" ColumnName="CFGITMREF_0" />
+                <ScalarProperty Name="CFGDELDAT_0" ColumnName="CFGDELDAT_0" />
+                <ScalarProperty Name="CREMAC_0" ColumnName="CREMAC_0" />
+                <ScalarProperty Name="FLYCAT_0" ColumnName="FLYCAT_0" />
+                <ScalarProperty Name="TPLCONLND_0" ColumnName="TPLCONLND_0" />
+                <ScalarProperty Name="TPLCONGUA_0" ColumnName="TPLCONGUA_0" />
+                <ScalarProperty Name="TPLCONSRV_0" ColumnName="TPLCONSRV_0" />
+                <ScalarProperty Name="PITCDT_0" ColumnName="PITCDT_0" />
+                <ScalarProperty Name="PITCDTUOM_0" ColumnName="PITCDTUOM_0" />
+                <ScalarProperty Name="STULBEFMT_0" ColumnName="STULBEFMT_0" />
+                <ScalarProperty Name="ALTBOMHDK_0" ColumnName="ALTBOMHDK_0" />
+                <ScalarProperty Name="HDKITMTYP_0" ColumnName="HDKITMTYP_0" />
+                <ScalarProperty Name="STOISSDEF_0" ColumnName="STOISSDEF_0" />
+                <ScalarProperty Name="DAYUOM_0" ColumnName="DAYUOM_0" />
+                <ScalarProperty Name="HOUUOM_0" ColumnName="HOUUOM_0" />
+                <ScalarProperty Name="MNTUOM_0" ColumnName="MNTUOM_0" />
+                <ScalarProperty Name="DTY_0" ColumnName="DTY_0" />
+                <ScalarProperty Name="TRKCOD_0" ColumnName="TRKCOD_0" />
+                <ScalarProperty Name="PURFLG_0" ColumnName="PURFLG_0" />
+                <ScalarProperty Name="MFGFLG_0" ColumnName="MFGFLG_0" />
+                <ScalarProperty Name="SCPFLG_0" ColumnName="SCPFLG_0" />
+                <ScalarProperty Name="SCSFLG_0" ColumnName="SCSFLG_0" />
+                <ScalarProperty Name="PHAFLG_0" ColumnName="PHAFLG_0" />
+                <ScalarProperty Name="GENFLG_0" ColumnName="GENFLG_0" />
+                <ScalarProperty Name="TOOFLG_0" ColumnName="TOOFLG_0" />
+                <ScalarProperty Name="DLVFLG_0" ColumnName="DLVFLG_0" />
+                <ScalarProperty Name="SALFLG_0" ColumnName="SALFLG_0" />
+                <ScalarProperty Name="INTFLG_0" ColumnName="INTFLG_0" />
+                <ScalarProperty Name="FLGFAS_0" ColumnName="FLGFAS_0" />
+                <ScalarProperty Name="NEWLTISTA_0" ColumnName="NEWLTISTA_0" />
+                <ScalarProperty Name="DLU_0" ColumnName="DLU_0" />
+                <ScalarProperty Name="XC_SCLASS_0" ColumnName="XC_SCLASS_0" />
+                <ScalarProperty Name="SHLUOM_0" ColumnName="SHLUOM_0" />
+                <ScalarProperty Name="SHLLTIUOM_0" ColumnName="SHLLTIUOM_0" />
+                <ScalarProperty Name="EXPNUM_0" ColumnName="EXPNUM_0" />
+                <ScalarProperty Name="CREDAT_0" ColumnName="CREDAT_0" />
+                <ScalarProperty Name="CREUSR_0" ColumnName="CREUSR_0" />
+                <ScalarProperty Name="UPDDAT_0" ColumnName="UPDDAT_0" />
+                <ScalarProperty Name="UPDUSR_0" ColumnName="UPDUSR_0" />
+                <ScalarProperty Name="XC_MATTOT_0" ColumnName="XC_MATTOT_0" />
+                <ScalarProperty Name="STAFED_0" ColumnName="STAFED_0" />
+                <ScalarProperty Name="PLMITMREF_0" ColumnName="PLMITMREF_0" />
+                <ScalarProperty Name="PLMATTURL_0" ColumnName="PLMATTURL_0" />
+                <ScalarProperty Name="PLMHISURL_0" ColumnName="PLMHISURL_0" />
+                <ScalarProperty Name="CRESTP_0" ColumnName="CRESTP_0" />
+                <ScalarProperty Name="UPDSTP_0" ColumnName="UPDSTP_0" />
+                <ScalarProperty Name="IDTSGL_0" ColumnName="IDTSGL_0" />
+                <ScalarProperty Name="XDUTCOD_0" ColumnName="XDUTCOD_0" />
+                <ScalarProperty Name="XC_PCKTYP_0" ColumnName="XC_PCKTYP_0" />
+                <ScalarProperty Name="XC_NMFC_0" ColumnName="XC_NMFC_0" />
+                <ScalarProperty Name="XC_ADDHNDL_0" ColumnName="XC_ADDHNDL_0" />
+                <ScalarProperty Name="XC_OVRSZ_0" ColumnName="XC_OVRSZ_0" />
+                <ScalarProperty Name="XC_FRTUNITS_0" ColumnName="XC_FRTUNITS_0" />
+                <ScalarProperty Name="XA_VOLUOM_0" ColumnName="XA_VOLUOM_0" />
+                <ScalarProperty Name="XB_FRTCLS_0" ColumnName="XB_FRTCLS_0" />
+                <ScalarProperty Name="XA_ITMURL_0" ColumnName="XA_ITMURL_0" />
+                <ScalarProperty Name="XA_WID_0" ColumnName="XA_WID_0" />
+                <ScalarProperty Name="XA_HEI_0" ColumnName="XA_HEI_0" />
+                <ScalarProperty Name="XA_DTH_0" ColumnName="XA_DTH_0" />
+                <ScalarProperty Name="XA_PRDVOL_0" ColumnName="XA_PRDVOL_0" />
+                <ScalarProperty Name="XA_ALGITM_0" ColumnName="XA_ALGITM_0" />
+                <ScalarProperty Name="XA_ALGITMCON_0" ColumnName="XA_ALGITMCON_0" />
+                <ScalarProperty Name="ZITMDES4_0" ColumnName="ZITMDES4_0" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SORDERPs">
+            <EntityTypeMapping TypeName="x3v6Model.SORDERP">
+              <MappingFragment StoreEntitySet="SORDERP">
+                <ScalarProperty Name="SOHNUM_0" ColumnName="SOHNUM_0" />
+                <ScalarProperty Name="SOPLIN_0" ColumnName="SOPLIN_0" />
+                <ScalarProperty Name="SOPSEQ_0" ColumnName="SOPSEQ_0" />
+                <ScalarProperty Name="CPY_0" ColumnName="CPY_0" />
+                <ScalarProperty Name="SOHCAT_0" ColumnName="SOHCAT_0" />
+                <ScalarProperty Name="STRDAT_0" ColumnName="STRDAT_0" />
+                <ScalarProperty Name="ENDDAT_0" ColumnName="ENDDAT_0" />
+                <ScalarProperty Name="BPCORD_0" ColumnName="BPCORD_0" />
+                <ScalarProperty Name="BPAADD_0" ColumnName="BPAADD_0" />
+                <ScalarProperty Name="CNDNAM_0" ColumnName="CNDNAM_0" />
+                <ScalarProperty Name="BPCINV_0" ColumnName="BPCINV_0" />
+                <ScalarProperty Name="STOFCY_0" ColumnName="STOFCY_0" />
+                <ScalarProperty Name="SALFCY_0" ColumnName="SALFCY_0" />
+                <ScalarProperty Name="ITMREF_0" ColumnName="ITMREF_0" />
+                <ScalarProperty Name="ITMDES1_0" ColumnName="ITMDES1_0" />
+                <ScalarProperty Name="ITMDES_0" ColumnName="ITMDES_0" />
+                <ScalarProperty Name="ITMREFBPC_0" ColumnName="ITMREFBPC_0" />
+                <ScalarProperty Name="VACITM_0" ColumnName="VACITM_0" />
+                <ScalarProperty Name="VACITM_1" ColumnName="VACITM_1" />
+                <ScalarProperty Name="VACITM_2" ColumnName="VACITM_2" />
+                <ScalarProperty Name="REP1_0" ColumnName="REP1_0" />
+                <ScalarProperty Name="REP2_0" ColumnName="REP2_0" />
+                <ScalarProperty Name="REPRAT1_0" ColumnName="REPRAT1_0" />
+                <ScalarProperty Name="REPRAT2_0" ColumnName="REPRAT2_0" />
+                <ScalarProperty Name="REPCOE_0" ColumnName="REPCOE_0" />
+                <ScalarProperty Name="GROPRI_0" ColumnName="GROPRI_0" />
+                <ScalarProperty Name="PRIREN_0" ColumnName="PRIREN_0" />
+                <ScalarProperty Name="NETPRI_0" ColumnName="NETPRI_0" />
+                <ScalarProperty Name="NETPRINOT_0" ColumnName="NETPRINOT_0" />
+                <ScalarProperty Name="NETPRIATI_0" ColumnName="NETPRIATI_0" />
+                <ScalarProperty Name="PFM_0" ColumnName="PFM_0" />
+                <ScalarProperty Name="CPRPRI_0" ColumnName="CPRPRI_0" />
+                <ScalarProperty Name="DISCRGVAL1_0" ColumnName="DISCRGVAL1_0" />
+                <ScalarProperty Name="DISCRGVAL2_0" ColumnName="DISCRGVAL2_0" />
+                <ScalarProperty Name="DISCRGVAL3_0" ColumnName="DISCRGVAL3_0" />
+                <ScalarProperty Name="DISCRGVAL4_0" ColumnName="DISCRGVAL4_0" />
+                <ScalarProperty Name="DISCRGVAL5_0" ColumnName="DISCRGVAL5_0" />
+                <ScalarProperty Name="DISCRGVAL6_0" ColumnName="DISCRGVAL6_0" />
+                <ScalarProperty Name="DISCRGVAL7_0" ColumnName="DISCRGVAL7_0" />
+                <ScalarProperty Name="DISCRGVAL8_0" ColumnName="DISCRGVAL8_0" />
+                <ScalarProperty Name="DISCRGVAL9_0" ColumnName="DISCRGVAL9_0" />
+                <ScalarProperty Name="DISCRGREN1_0" ColumnName="DISCRGREN1_0" />
+                <ScalarProperty Name="DISCRGREN2_0" ColumnName="DISCRGREN2_0" />
+                <ScalarProperty Name="DISCRGREN3_0" ColumnName="DISCRGREN3_0" />
+                <ScalarProperty Name="DISCRGREN4_0" ColumnName="DISCRGREN4_0" />
+                <ScalarProperty Name="DISCRGREN5_0" ColumnName="DISCRGREN5_0" />
+                <ScalarProperty Name="DISCRGREN6_0" ColumnName="DISCRGREN6_0" />
+                <ScalarProperty Name="DISCRGREN7_0" ColumnName="DISCRGREN7_0" />
+                <ScalarProperty Name="DISCRGREN8_0" ColumnName="DISCRGREN8_0" />
+                <ScalarProperty Name="DISCRGREN9_0" ColumnName="DISCRGREN9_0" />
+                <ScalarProperty Name="VAT_0" ColumnName="VAT_0" />
+                <ScalarProperty Name="VAT_1" ColumnName="VAT_1" />
+                <ScalarProperty Name="VAT_2" ColumnName="VAT_2" />
+                <ScalarProperty Name="CLCAMT1_0" ColumnName="CLCAMT1_0" />
+                <ScalarProperty Name="CLCAMT2_0" ColumnName="CLCAMT2_0" />
+                <ScalarProperty Name="SAU_0" ColumnName="SAU_0" />
+                <ScalarProperty Name="STU_0" ColumnName="STU_0" />
+                <ScalarProperty Name="SAUSTUCOE_0" ColumnName="SAUSTUCOE_0" />
+                <ScalarProperty Name="TSICOD_0" ColumnName="TSICOD_0" />
+                <ScalarProperty Name="TSICOD_1" ColumnName="TSICOD_1" />
+                <ScalarProperty Name="TSICOD_2" ColumnName="TSICOD_2" />
+                <ScalarProperty Name="TSICOD_3" ColumnName="TSICOD_3" />
+                <ScalarProperty Name="TSICOD_4" ColumnName="TSICOD_4" />
+                <ScalarProperty Name="SOQSTA_0" ColumnName="SOQSTA_0" />
+                <ScalarProperty Name="LINTYP_0" ColumnName="LINTYP_0" />
+                <ScalarProperty Name="FOCFLG_0" ColumnName="FOCFLG_0" />
+                <ScalarProperty Name="ORILIN_0" ColumnName="ORILIN_0" />
+                <ScalarProperty Name="SQHNUM_0" ColumnName="SQHNUM_0" />
+                <ScalarProperty Name="CONNUM_0" ColumnName="CONNUM_0" />
+                <ScalarProperty Name="SQDLIN_0" ColumnName="SQDLIN_0" />
+                <ScalarProperty Name="LINREVNUM_0" ColumnName="LINREVNUM_0" />
+                <ScalarProperty Name="EXPNUM_0" ColumnName="EXPNUM_0" />
+                <ScalarProperty Name="CREUSR_0" ColumnName="CREUSR_0" />
+                <ScalarProperty Name="CREDAT_0" ColumnName="CREDAT_0" />
+                <ScalarProperty Name="UPDUSR_0" ColumnName="UPDUSR_0" />
+                <ScalarProperty Name="UPDDAT_0" ColumnName="UPDDAT_0" />
+                <ScalarProperty Name="ZVENPRICE_0" ColumnName="ZVENPRICE_0" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SORDERQs">
+            <EntityTypeMapping TypeName="x3v6Model.SORDERQ">
+              <MappingFragment StoreEntitySet="SORDERQ">
+                <ScalarProperty Name="SOHNUM_0" ColumnName="SOHNUM_0" />
+                <ScalarProperty Name="SOPLIN_0" ColumnName="SOPLIN_0" />
+                <ScalarProperty Name="SOQSEQ_0" ColumnName="SOQSEQ_0" />
+                <ScalarProperty Name="CPY_0" ColumnName="CPY_0" />
+                <ScalarProperty Name="SOHCAT_0" ColumnName="SOHCAT_0" />
+                <ScalarProperty Name="SALFCY_0" ColumnName="SALFCY_0" />
+                <ScalarProperty Name="BPCORD_0" ColumnName="BPCORD_0" />
+                <ScalarProperty Name="BPAADD_0" ColumnName="BPAADD_0" />
+                <ScalarProperty Name="ITMREF_0" ColumnName="ITMREF_0" />
+                <ScalarProperty Name="STOFCY_0" ColumnName="STOFCY_0" />
+                <ScalarProperty Name="USEPLC_0" ColumnName="USEPLC_0" />
+                <ScalarProperty Name="CAD_0" ColumnName="CAD_0" />
+                <ScalarProperty Name="YEA_0" ColumnName="YEA_0" />
+                <ScalarProperty Name="MON_0" ColumnName="MON_0" />
+                <ScalarProperty Name="DLVDAY_0" ColumnName="DLVDAY_0" />
+                <ScalarProperty Name="WEE_0" ColumnName="WEE_0" />
+                <ScalarProperty Name="ORDDAT_0" ColumnName="ORDDAT_0" />
+                <ScalarProperty Name="DEMDLVDAT_0" ColumnName="DEMDLVDAT_0" />
+                <ScalarProperty Name="DEMDLVHOU_0" ColumnName="DEMDLVHOU_0" />
+                <ScalarProperty Name="DEMDLVREF_0" ColumnName="DEMDLVREF_0" />
+                <ScalarProperty Name="IMPNUMLIG_0" ColumnName="IMPNUMLIG_0" />
+                <ScalarProperty Name="SHIDAT_0" ColumnName="SHIDAT_0" />
+                <ScalarProperty Name="SHIHOU_0" ColumnName="SHIHOU_0" />
+                <ScalarProperty Name="EXTDLVDAT_0" ColumnName="EXTDLVDAT_0" />
+                <ScalarProperty Name="SOQSTA_0" ColumnName="SOQSTA_0" />
+                <ScalarProperty Name="INVFLG_0" ColumnName="INVFLG_0" />
+                <ScalarProperty Name="DEMSTA_0" ColumnName="DEMSTA_0" />
+                <ScalarProperty Name="DEMNUM_0" ColumnName="DEMNUM_0" />
+                <ScalarProperty Name="STOMGTCOD_0" ColumnName="STOMGTCOD_0" />
+                <ScalarProperty Name="LOT_0" ColumnName="LOT_0" />
+                <ScalarProperty Name="STA_0" ColumnName="STA_0" />
+                <ScalarProperty Name="LOC_0" ColumnName="LOC_0" />
+                <ScalarProperty Name="ALLTYP_0" ColumnName="ALLTYP_0" />
+                <ScalarProperty Name="DSPLINFLG_0" ColumnName="DSPLINFLG_0" />
+                <ScalarProperty Name="DDTANUM_0" ColumnName="DDTANUM_0" />
+                <ScalarProperty Name="DDTANUM_1" ColumnName="DDTANUM_1" />
+                <ScalarProperty Name="DDTANUM_2" ColumnName="DDTANUM_2" />
+                <ScalarProperty Name="DDTANUM_3" ColumnName="DDTANUM_3" />
+                <ScalarProperty Name="DDTANUM_4" ColumnName="DDTANUM_4" />
+                <ScalarProperty Name="DDTANUM_5" ColumnName="DDTANUM_5" />
+                <ScalarProperty Name="DDTANUM_6" ColumnName="DDTANUM_6" />
+                <ScalarProperty Name="DDTANUM_7" ColumnName="DDTANUM_7" />
+                <ScalarProperty Name="DDTANUM_8" ColumnName="DDTANUM_8" />
+                <ScalarProperty Name="DDTANOT_0" ColumnName="DDTANOT_0" />
+                <ScalarProperty Name="DDTANOT_1" ColumnName="DDTANOT_1" />
+                <ScalarProperty Name="DDTANOT_2" ColumnName="DDTANOT_2" />
+                <ScalarProperty Name="DDTANOT_3" ColumnName="DDTANOT_3" />
+                <ScalarProperty Name="DDTANOT_4" ColumnName="DDTANOT_4" />
+                <ScalarProperty Name="DDTANOT_5" ColumnName="DDTANOT_5" />
+                <ScalarProperty Name="DDTANOT_6" ColumnName="DDTANOT_6" />
+                <ScalarProperty Name="DDTANOT_7" ColumnName="DDTANOT_7" />
+                <ScalarProperty Name="DDTANOT_8" ColumnName="DDTANOT_8" />
+                <ScalarProperty Name="ORIQTY_0" ColumnName="ORIQTY_0" />
+                <ScalarProperty Name="QTY_0" ColumnName="QTY_0" />
+                <ScalarProperty Name="SHTQTY_0" ColumnName="SHTQTY_0" />
+                <ScalarProperty Name="ALLQTY_0" ColumnName="ALLQTY_0" />
+                <ScalarProperty Name="ODLQTY_0" ColumnName="ODLQTY_0" />
+                <ScalarProperty Name="DLVQTY_0" ColumnName="DLVQTY_0" />
+                <ScalarProperty Name="INVQTY_0" ColumnName="INVQTY_0" />
+                <ScalarProperty Name="TDLQTY_0" ColumnName="TDLQTY_0" />
+                <ScalarProperty Name="LPRQTY_0" ColumnName="LPRQTY_0" />
+                <ScalarProperty Name="OPRQTY_0" ColumnName="OPRQTY_0" />
+                <ScalarProperty Name="PREQTY_0" ColumnName="PREQTY_0" />
+                <ScalarProperty Name="QTYSTU_0" ColumnName="QTYSTU_0" />
+                <ScalarProperty Name="SHTQTYSTU_0" ColumnName="SHTQTYSTU_0" />
+                <ScalarProperty Name="ALLQTYSTU_0" ColumnName="ALLQTYSTU_0" />
+                <ScalarProperty Name="ODLQTYSTU_0" ColumnName="ODLQTYSTU_0" />
+                <ScalarProperty Name="DLVQTYSTU_0" ColumnName="DLVQTYSTU_0" />
+                <ScalarProperty Name="INVQTYSTU_0" ColumnName="INVQTYSTU_0" />
+                <ScalarProperty Name="TDLQTYSTU_0" ColumnName="TDLQTYSTU_0" />
+                <ScalarProperty Name="LPRQTYSTU_0" ColumnName="LPRQTYSTU_0" />
+                <ScalarProperty Name="OPRQTYSTU_0" ColumnName="OPRQTYSTU_0" />
+                <ScalarProperty Name="PREQTYSTU_0" ColumnName="PREQTYSTU_0" />
+                <ScalarProperty Name="PRECOD_0" ColumnName="PRECOD_0" />
+                <ScalarProperty Name="DRN_0" ColumnName="DRN_0" />
+                <ScalarProperty Name="DLVPIO_0" ColumnName="DLVPIO_0" />
+                <ScalarProperty Name="DLVPIOCMP_0" ColumnName="DLVPIOCMP_0" />
+                <ScalarProperty Name="BPTNUM_0" ColumnName="BPTNUM_0" />
+                <ScalarProperty Name="MDL_0" ColumnName="MDL_0" />
+                <ScalarProperty Name="DAYLTI_0" ColumnName="DAYLTI_0" />
+                <ScalarProperty Name="PCK_0" ColumnName="PCK_0" />
+                <ScalarProperty Name="PCKCAP_0" ColumnName="PCKCAP_0" />
+                <ScalarProperty Name="SOQTEX_0" ColumnName="SOQTEX_0" />
+                <ScalarProperty Name="SDHNUM_0" ColumnName="SDHNUM_0" />
+                <ScalarProperty Name="SDDLIN_0" ColumnName="SDDLIN_0" />
+                <ScalarProperty Name="FMI_0" ColumnName="FMI_0" />
+                <ScalarProperty Name="FMINUM_0" ColumnName="FMINUM_0" />
+                <ScalarProperty Name="FMILIN_0" ColumnName="FMILIN_0" />
+                <ScalarProperty Name="FMISEQ_0" ColumnName="FMISEQ_0" />
+                <ScalarProperty Name="POHNUM_0" ColumnName="POHNUM_0" />
+                <ScalarProperty Name="POPLIN_0" ColumnName="POPLIN_0" />
+                <ScalarProperty Name="POQSEQ_0" ColumnName="POQSEQ_0" />
+                <ScalarProperty Name="PERSTRDAT_0" ColumnName="PERSTRDAT_0" />
+                <ScalarProperty Name="PERENDDAT_0" ColumnName="PERENDDAT_0" />
+                <ScalarProperty Name="PERNBRDAY_0" ColumnName="PERNBRDAY_0" />
+                <ScalarProperty Name="GEOCOD_0" ColumnName="GEOCOD_0" />
+                <ScalarProperty Name="INSCTYFLG_0" ColumnName="INSCTYFLG_0" />
+                <ScalarProperty Name="VTS_0" ColumnName="VTS_0" />
+                <ScalarProperty Name="VTC_0" ColumnName="VTC_0" />
+                <ScalarProperty Name="TAXGEOFLG_0" ColumnName="TAXGEOFLG_0" />
+                <ScalarProperty Name="TAXFLG_0" ColumnName="TAXFLG_0" />
+                <ScalarProperty Name="TAXREGFLG_0" ColumnName="TAXREGFLG_0" />
+                <ScalarProperty Name="RATTAXLIN_0" ColumnName="RATTAXLIN_0" />
+                <ScalarProperty Name="BASTAXLIN_0" ColumnName="BASTAXLIN_0" />
+                <ScalarProperty Name="OCNPRNBOM_0" ColumnName="OCNPRNBOM_0" />
+                <ScalarProperty Name="NDEPRNBOM_0" ColumnName="NDEPRNBOM_0" />
+                <ScalarProperty Name="INVPRNBOM_0" ColumnName="INVPRNBOM_0" />
+                <ScalarProperty Name="CCLREN_0" ColumnName="CCLREN_0" />
+                <ScalarProperty Name="CCLDAT_0" ColumnName="CCLDAT_0" />
+                <ScalarProperty Name="PITFLG_0" ColumnName="PITFLG_0" />
+                <ScalarProperty Name="EXPNUM_0" ColumnName="EXPNUM_0" />
+                <ScalarProperty Name="DSPLINWEI_0" ColumnName="DSPLINWEI_0" />
+                <ScalarProperty Name="DSPLINVOL_0" ColumnName="DSPLINVOL_0" />
+                <ScalarProperty Name="DSPWEU_0" ColumnName="DSPWEU_0" />
+                <ScalarProperty Name="DSPVOU_0" ColumnName="DSPVOU_0" />
+                <ScalarProperty Name="CREUSR_0" ColumnName="CREUSR_0" />
+                <ScalarProperty Name="CREDAT_0" ColumnName="CREDAT_0" />
+                <ScalarProperty Name="UPDUSR_0" ColumnName="UPDUSR_0" />
+                <ScalarProperty Name="UPDDAT_0" ColumnName="UPDDAT_0" />
+                <ScalarProperty Name="XB_HLDCOD_0" ColumnName="XB_HLDCOD_0" />
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="STOJOUs">
+            <EntityTypeMapping TypeName="x3v6Model.STOJOU">
+              <MappingFragment StoreEntitySet="STOJOU">
+                <ScalarProperty Name="ROWID" ColumnName="ROWID" />
+                <ScalarProperty Name="UPDUSR_0" ColumnName="UPDUSR_0" />
+                <ScalarProperty Name="UPDDAT_0" ColumnName="UPDDAT_0" />
+                <ScalarProperty Name="CREUSR_0" ColumnName="CREUSR_0" />
+                <ScalarProperty Name="CRETIM_0" ColumnName="CRETIM_0" />
+                <ScalarProperty Name="CREDAT_0" ColumnName="CREDAT_0" />
+                <ScalarProperty Name="PRONUM_0" ColumnName="PRONUM_0" />
+                <ScalarProperty Name="EXPNUM_0" ColumnName="EXPNUM_0" />
+                <ScalarProperty Name="CREMVTSEQ_0" ColumnName="CREMVTSEQ_0" />
+                <ScalarProperty Name="CREMVTTIM_0" ColumnName="CREMVTTIM_0" />
+                <ScalarProperty Name="CREMVTDAT_0" ColumnName="CREMVTDAT_0" />
+                <ScalarProperty Name="NEWLTIDAT_0" ColumnName="NEWLTIDAT_0" />
+                <ScalarProperty Name="DLUDAT_0" ColumnName="DLUDAT_0" />
+                <ScalarProperty Name="BETCPY_0" ColumnName="BETCPY_0" />
+                <ScalarProperty Name="CTRNUM_0" ColumnName="CTRNUM_0" />
+                <ScalarProperty Name="PALNUM_0" ColumnName="PALNUM_0" />
+                <ScalarProperty Name="NUMVCR_0" ColumnName="NUMVCR_0" />
+                <ScalarProperty Name="GTE_0" ColumnName="GTE_0" />
+                <ScalarProperty Name="AGGIFAFLG_0" ColumnName="AGGIFAFLG_0" />
+                <ScalarProperty Name="FINRSPFCY_0" ColumnName="FINRSPFCY_0" />
+                <ScalarProperty Name="ENTCOD_0" ColumnName="ENTCOD_0" />
+                <ScalarProperty Name="CCE_19" ColumnName="CCE_19" />
+                <ScalarProperty Name="CCE_18" ColumnName="CCE_18" />
+                <ScalarProperty Name="CCE_17" ColumnName="CCE_17" />
+                <ScalarProperty Name="CCE_16" ColumnName="CCE_16" />
+                <ScalarProperty Name="CCE_15" ColumnName="CCE_15" />
+                <ScalarProperty Name="CCE_14" ColumnName="CCE_14" />
+                <ScalarProperty Name="CCE_13" ColumnName="CCE_13" />
+                <ScalarProperty Name="CCE_12" ColumnName="CCE_12" />
+                <ScalarProperty Name="CCE_11" ColumnName="CCE_11" />
+                <ScalarProperty Name="CCE_10" ColumnName="CCE_10" />
+                <ScalarProperty Name="CCE_9" ColumnName="CCE_9" />
+                <ScalarProperty Name="CCE_8" ColumnName="CCE_8" />
+                <ScalarProperty Name="CCE_7" ColumnName="CCE_7" />
+                <ScalarProperty Name="CCE_6" ColumnName="CCE_6" />
+                <ScalarProperty Name="CCE_5" ColumnName="CCE_5" />
+                <ScalarProperty Name="CCE_4" ColumnName="CCE_4" />
+                <ScalarProperty Name="CCE_3" ColumnName="CCE_3" />
+                <ScalarProperty Name="CCE_2" ColumnName="CCE_2" />
+                <ScalarProperty Name="CCE_1" ColumnName="CCE_1" />
+                <ScalarProperty Name="CCE_0" ColumnName="CCE_0" />
+                <ScalarProperty Name="DIE_19" ColumnName="DIE_19" />
+                <ScalarProperty Name="DIE_18" ColumnName="DIE_18" />
+                <ScalarProperty Name="DIE_17" ColumnName="DIE_17" />
+                <ScalarProperty Name="DIE_16" ColumnName="DIE_16" />
+                <ScalarProperty Name="DIE_15" ColumnName="DIE_15" />
+                <ScalarProperty Name="DIE_14" ColumnName="DIE_14" />
+                <ScalarProperty Name="DIE_13" ColumnName="DIE_13" />
+                <ScalarProperty Name="DIE_12" ColumnName="DIE_12" />
+                <ScalarProperty Name="DIE_11" ColumnName="DIE_11" />
+                <ScalarProperty Name="DIE_10" ColumnName="DIE_10" />
+                <ScalarProperty Name="DIE_9" ColumnName="DIE_9" />
+                <ScalarProperty Name="DIE_8" ColumnName="DIE_8" />
+                <ScalarProperty Name="DIE_7" ColumnName="DIE_7" />
+                <ScalarProperty Name="DIE_6" ColumnName="DIE_6" />
+                <ScalarProperty Name="DIE_5" ColumnName="DIE_5" />
+                <ScalarProperty Name="DIE_4" ColumnName="DIE_4" />
+                <ScalarProperty Name="DIE_3" ColumnName="DIE_3" />
+                <ScalarProperty Name="DIE_2" ColumnName="DIE_2" />
+                <ScalarProperty Name="DIE_1" ColumnName="DIE_1" />
+                <ScalarProperty Name="DIE_0" ColumnName="DIE_0" />
+                <ScalarProperty Name="LBENBR_0" ColumnName="LBENBR_0" />
+                <ScalarProperty Name="LBEFMT_0" ColumnName="LBEFMT_0" />
+                <ScalarProperty Name="REGFLG_0" ColumnName="REGFLG_0" />
+                <ScalarProperty Name="PRNFLG_0" ColumnName="PRNFLG_0" />
+                <ScalarProperty Name="QLYCTLDEM_0" ColumnName="QLYCTLDEM_0" />
+                <ScalarProperty Name="ACTQTY_0" ColumnName="ACTQTY_0" />
+                <ScalarProperty Name="ACT_0" ColumnName="ACT_0" />
+                <ScalarProperty Name="POT_0" ColumnName="POT_0" />
+                <ScalarProperty Name="STA_0" ColumnName="STA_0" />
+                <ScalarProperty Name="SHLDAT_0" ColumnName="SHLDAT_0" />
+                <ScalarProperty Name="AMTDEV2_0" ColumnName="AMTDEV2_0" />
+                <ScalarProperty Name="AMTDEV_0" ColumnName="AMTDEV_0" />
+                <ScalarProperty Name="PRIREGFLG_0" ColumnName="PRIREGFLG_0" />
+                <ScalarProperty Name="PRINAT2_0" ColumnName="PRINAT2_0" />
+                <ScalarProperty Name="PRIVAL2_0" ColumnName="PRIVAL2_0" />
+                <ScalarProperty Name="VARVAL2_0" ColumnName="VARVAL2_0" />
+                <ScalarProperty Name="AMTVAL2_0" ColumnName="AMTVAL2_0" />
+                <ScalarProperty Name="PRINAT_0" ColumnName="PRINAT_0" />
+                <ScalarProperty Name="PRIVAL_0" ColumnName="PRIVAL_0" />
+                <ScalarProperty Name="PRIORD_0" ColumnName="PRIORD_0" />
+                <ScalarProperty Name="VARVAL_0" ColumnName="VARVAL_0" />
+                <ScalarProperty Name="VARORD_0" ColumnName="VARORD_0" />
+                <ScalarProperty Name="AMTVAL_0" ColumnName="AMTVAL_0" />
+                <ScalarProperty Name="AMTORD_0" ColumnName="AMTORD_0" />
+                <ScalarProperty Name="PCUSTUORI_0" ColumnName="PCUSTUORI_0" />
+                <ScalarProperty Name="PCUORI_0" ColumnName="PCUORI_0" />
+                <ScalarProperty Name="STU_0" ColumnName="STU_0" />
+                <ScalarProperty Name="QTYSTU_0" ColumnName="QTYSTU_0" />
+                <ScalarProperty Name="PCUSTUCOE_0" ColumnName="PCUSTUCOE_0" />
+                <ScalarProperty Name="QTYPCU_0" ColumnName="QTYPCU_0" />
+                <ScalarProperty Name="PCU_0" ColumnName="PCU_0" />
+                <ScalarProperty Name="USRFLD4_0" ColumnName="USRFLD4_0" />
+                <ScalarProperty Name="USRFLD3_0" ColumnName="USRFLD3_0" />
+                <ScalarProperty Name="USRFLD2_0" ColumnName="USRFLD2_0" />
+                <ScalarProperty Name="USRFLD1_0" ColumnName="USRFLD1_0" />
+                <ScalarProperty Name="VCRLINREG_0" ColumnName="VCRLINREG_0" />
+                <ScalarProperty Name="VCRNUMREG_0" ColumnName="VCRNUMREG_0" />
+                <ScalarProperty Name="VCRTYPREG_0" ColumnName="VCRTYPREG_0" />
+                <ScalarProperty Name="VCRSEQORI_0" ColumnName="VCRSEQORI_0" />
+                <ScalarProperty Name="VCRLINORI_0" ColumnName="VCRLINORI_0" />
+                <ScalarProperty Name="VCRNUMORI_0" ColumnName="VCRNUMORI_0" />
+                <ScalarProperty Name="VCRTYPORI_0" ColumnName="VCRTYPORI_0" />
+                <ScalarProperty Name="VCRLIN_0" ColumnName="VCRLIN_0" />
+                <ScalarProperty Name="VCRNUM_0" ColumnName="VCRNUM_0" />
+                <ScalarProperty Name="VCRTYP_0" ColumnName="VCRTYP_0" />
+                <ScalarProperty Name="BPRNUM_0" ColumnName="BPRNUM_0" />
+                <ScalarProperty Name="PJT_0" ColumnName="PJT_0" />
+                <ScalarProperty Name="MVTDES_0" ColumnName="MVTDES_0" />
+                <ScalarProperty Name="TRSFAM_0" ColumnName="TRSFAM_0" />
+                <ScalarProperty Name="TRSTYP_0" ColumnName="TRSTYP_0" />
+                <ScalarProperty Name="SERNUM_0" ColumnName="SERNUM_0" />
+                <ScalarProperty Name="WRH_0" ColumnName="WRH_0" />
+                <ScalarProperty Name="LOC_0" ColumnName="LOC_0" />
+                <ScalarProperty Name="BPSLOT_0" ColumnName="BPSLOT_0" />
+                <ScalarProperty Name="SLO_0" ColumnName="SLO_0" />
+                <ScalarProperty Name="LOT_0" ColumnName="LOT_0" />
+                <ScalarProperty Name="OWNER_0" ColumnName="OWNER_0" />
+                <ScalarProperty Name="CSTCOU_0" ColumnName="CSTCOU_0" />
+                <ScalarProperty Name="CSTTIM_0" ColumnName="CSTTIM_0" />
+                <ScalarProperty Name="CSTDAT_0" ColumnName="CSTDAT_0" />
+                <ScalarProperty Name="MVTIND_0" ColumnName="MVTIND_0" />
+                <ScalarProperty Name="MVTSEQ_0" ColumnName="MVTSEQ_0" />
+                <ScalarProperty Name="IPTDAT_0" ColumnName="IPTDAT_0" />
+                <ScalarProperty Name="ITMREF_0" ColumnName="ITMREF_0" />
+                <ScalarProperty Name="UPDCOD_0" ColumnName="UPDCOD_0" />
+                <ScalarProperty Name="STOFCY_0" ColumnName="STOFCY_0" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Default" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams />
+  </Designer>
+</edmx:Edmx>

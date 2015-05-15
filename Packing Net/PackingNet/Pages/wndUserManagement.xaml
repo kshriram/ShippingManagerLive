@@ -1,0 +1,169 @@
+﻿<Window x:Class="Packing_Net.Pages.UserManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UserManagement" Height="760" Width="1280" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded_1"
+         ShowInTaskbar="True" Icon="/PackingNet;component/box1.ico" WindowState="Maximized" Background="#FF0F0F0F"
+        >
+    <Viewbox>
+        <Border Background="#FFEEB41C" BorderThickness="4,0"  BorderBrush="#FFEEB41C">
+            <Grid Background="Black">
+                <Canvas HorizontalAlignment="Right" Height="766" VerticalAlignment="Top" Width="1280" RenderTransformOrigin="0.464,0.499"  Background="White" Margin="0,0,0,-6">
+                    <Border BorderBrush="Black" BorderThickness="1" Height="680" Canvas.Top="86" Width="1280">
+                        <DockPanel LastChildFill="False" Margin="1,0,5,-1">
+                            <Border BorderBrush="Black" BorderThickness="1" Height="679" VerticalAlignment="Top" Width="220" Background="Black">
+                                <Canvas>
+                                    <TextBox Name="txtSearch" Height="37" TextWrapping="Wrap" Width="169" Canvas.Top="176" Canvas.Left="10"/>
+                                    <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
+                                    Content="New User" 
+                                    HorizontalAlignment="Left" 
+                                    VerticalAlignment="Top" 
+                                    Width="160" Height="42" 
+                                    Background="#FF535353" 
+                                    Foreground="White" 
+                                    BorderBrush="{x:Null}" 
+                                    FontSize="15" Canvas.Left="54" 
+                                    Canvas.Top="10" />
+                                    <Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="/PackingNet;component/Images/imgNewUser.png" Stretch="UniformToFill" Opacity="0.5" RenderTransformOrigin="0.5,0.5" Canvas.Left="9" Canvas.Top="8">
+                                        <Image.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="-1"/>
+                                                <SkewTransform/>
+                                                <RotateTransform/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </Image.RenderTransform>
+                                    </Image>
+                                    <Button Name="btnNewUser" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
+                                    Content="New User" 
+                                    HorizontalAlignment="Left" 
+                                    VerticalAlignment="Top" 
+                                    Width="160" Height="42" 
+                                    Background="#FF535353" 
+                                    Foreground="White" 
+                                    BorderBrush="{x:Null}" 
+                                    FontSize="15" Canvas.Left="54" 
+                                    Canvas.Top="10" Click="btnNewUser_Click" />
+                                    <Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="/PackingNet;component/Images/imgNewUser.png" Stretch="UniformToFill" Opacity="0.5" RenderTransformOrigin="0.5,0.5" Canvas.Left="9" Canvas.Top="8">
+                                        <Image.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="-1"/>
+                                                <SkewTransform/>
+                                                <RotateTransform/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </Image.RenderTransform>
+                                    </Image>
+
+
+                                    <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
+                                    Content="Home" 
+                                    HorizontalAlignment="Left" 
+                                    VerticalAlignment="Top" 
+                                    Width="160" Height="42" 
+                                    Background="#FF535353" 
+                                    Foreground="White" 
+                                    BorderBrush="{x:Null}" 
+                                    FontSize="15" Canvas.Left="53" 
+                                    Canvas.Top="118" Click="btnHome_Click"/>
+                                    <Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="/PackingNet;component/Images/imgHome.png" Stretch="UniformToFill" Opacity="0.5" RenderTransformOrigin="0.5,0.5" Canvas.Left="11" Canvas.Top="119">
+                                        <Image.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="-1"/>
+                                                <SkewTransform/>
+                                                <RotateTransform/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </Image.RenderTransform>
+                                    </Image>
+                                    <Button Name="btnRole" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
+                                    Content="Role " 
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" 
+                                    Width="160" 
+                                    Height="42" 
+                                    Background="#FF535353" 
+                                    Foreground="White" BorderBrush="{x:Null}" 
+                                    FontSize="15" Canvas.Left="53" 
+                                    Canvas.Top="62" Click="btnRole_Click" 
+                                    />
+                                    <Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="/PackingNet;component/Images/imgReport.png" Stretch="UniformToFill" Opacity="0.5" RenderTransformOrigin="0.5,0.5" Canvas.Left="10" Canvas.Top="63">
+                                        <Image.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="-1"/>
+                                                <SkewTransform/>
+                                                <RotateTransform/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </Image.RenderTransform>
+                                    </Image>
+                                </Canvas>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1" 
+                            Height="679" 
+                            VerticalAlignment="Top" Width="1055">
+                                <Frame Name="frmMain" Content="" 
+                               HorizontalAlignment="Left" 
+                               Width="1049" Margin="0,0,-3,0"
+                               NavigationUIVisibility="Hidden" 
+                               VerticalAlignment="Top"                               
+                               >
+                                </Frame>
+                            </Border>
+                        </DockPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource StyleApplicationBorderTOp}"   CornerRadius="0"   Background="#FF151515" Canvas.Top="-1" Width="1280" >
+                        <Canvas>
+                            <Label x:Name="lblUserTop" Style="{StaticResource StyleApplicationHeaderVerialbles}" Content="User Scott" Height="32" FontSize="15" FontWeight="Bold" Margin="1070,2,-8,53" />
+                            <Label Content="Shipping Manager" Style="{StaticResource lblTitleName}" Canvas.Left="206" Canvas.Top="21"/>
+                        </Canvas>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="2" Height="85" Canvas.Left="4" Canvas.Top=" 1" Width="201" Background="#00AEEAF3" >
+
+                        <Image Source="/PackingNet;component/Images/imgKrausLogo.png" Stretch="UniformToFill" Margin="-3,2,3,-2"/>
+                    </Border>
+                    <Canvas Height="650" Canvas.Left="0" Canvas.Top="89" Width="1270"/>
+                    <Label x:Name="lblUser" Content="Welcome" Height="32" Canvas.Left="770" HorizontalContentAlignment="Right" Canvas.Top="2" Width="292" Foreground="White" FontSize="15" FontWeight="Bold" />
+                    <Button HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Background="{x:Null}" BorderBrush="{x:Null}" Height="36" Canvas.Left="180" Canvas.Top="265">
+                    </Button>
+                    <Image Height="36" Width="40" Source="/PackingNet;component/Images/imgSearch.png" Stretch="Fill" Canvas.Left="180" Canvas.Top="265"/>
+                    <DataGrid  Name="grdUserList"
+                       AutoGenerateColumns="False"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Height="418"
+                Width="220" 
+                Background="{x:Null}"
+                Canvas.Top="321"
+                ItemsSource="{Binding}"
+                ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                       CanUserAddRows="False"
+                       CanUserResizeColumns="False" HorizontalGridLinesBrush="#FF474747" VerticalGridLinesBrush="{x:Null}" GridLinesVisibility="Horizontal" SelectionMode="Single" DataContextChanged="grdUserList_DataContextChanged">
+                        <DataGrid.ColumnHeaderStyle >
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="FontSize" Value="17"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="" Binding="{Binding UserID }" Width="0"  FontSize="16" Foreground="{x:Null}"  />
+                            <DataGridTextColumn  Header="Name" Binding="{Binding UserFullName}" Width="140" FontSize="14"  Foreground="#FF04266E" />
+                            <DataGridTemplateColumn Header="Select" Width="60"  >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <Button Name="btnSelectUsre" Content="➠" FontSize="23" FontWeight="Bold" Width="60" Height="30" Background="#FF4D4D4D" Foreground="White" Click="btnSelectUsre_Click"></Button>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Canvas>
+            </Grid>
+        </Border>
+        </Viewbox>
+</Window>

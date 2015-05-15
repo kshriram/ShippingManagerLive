@@ -1,0 +1,95 @@
+﻿-- Message Box Messages --
+Are you sure want to logout?|Вы уверены, что хотите выйти?
+Are you sure want to Exit?|Вы уверены, что хотите выйти?
+Session Expired|Сеанс окончен
+Session expired. Please login again to Continue...|Сессии истекло. Пожалуйста, войдите, чтобы продолжить ...
+Not previous user|Сеанс окончен
+You are not previously logged User.|Вы не авторизованный пользователь ранее.
+Access denied|доступ запрещен
+Incorrect User Name.|Неверное имя пользователя.
+Shipment is under packing.|авторизованный пользователь ранее.
+is packing The Shipment at station|авторизованный пользователь ранее
+Shipment is already packed| Отгрузка уже упакованы
+Please Check the Shipment ID!|Пожалуйста, проверить груз ID!
+not exists.|не существует.
+Manager Override|Менеджер Override
+Manager override required.|Менеджер Override авторизованный.
+Please scan your badge.|Пожалуйста, сканировать ваш значок.
+Update|обновление
+Setting Updated Successfully.|Изменения успешно обновлены.
+Setting Updation fail.|Сохранить обязательном порядке! Успешный откат транзакции.
+Record Upadate successfull.|Сохранить обязательном порядке
+Record Upadate Fail.|ательном
+item(s) packed out of|анить обязательном порядкеный откат транзакции.
+item(s).|item(s).
+Save Fail! Transaction Rollback Successful.|Сохранить обязательном порядке! Успешный откат транзакции.
+Shipment packing Completed.|льном порядкеУспешный откат транзак
+Save Successfull!|Sльном порядкеУспешный откат транзак
+Extra Packing!|льном порядкеУспешный!
+Required quantiy of this product is paked.|зательном порядкеУспешный откат транзак.
+Please do not pack this Product.|ательном порядкеный откат транза
+Wrong Product!|Неправильный продукт!
+The Product |Не продукт!
+is not belongs to this shipment.|анить обязательном порядкеный откат транзакции.
+Product not found|Неправильный продукт
+No product Found for this Code|ательном порядкеУспешный откат транза
+Exiting shipment will clear this shipment information.|анить обязательном порядкеный откат транзакции.
+Are you sure want to exit shipment?|ательном порядкеУспешный откат транза
+You are not authorised to override.|ельном порядкеУспешный откза.
+Please re-scan badge.|Пожалуйста, повторное сканирование значок.
+Setting Save Successfully.|ельном порядкеУспешный откза.
+Setting Updated Successfully.|ельном порядкеУспешный откза.
+This Shipment is in override mode.( manager: |анить обязательном порядкеный откат (транз:
+To apply the setting Application Need to restart.|Чтобы применить параметр приложения необходимо перезагрузить.
+Are you sure want to Re-start Application?|Вы уверены, что хотите повторно запустить приложение?
+-------new adds-------------
+Avg. Packing BoxTime(in Sec) |Сред. Упаная коробка Вемя (в секундах)
+Please scan your Shipment|Пожалуйста, сканировать ваш груз
+Local App Setting|Локальная настройка приложения
+Auto logout time|Интервал выхода
+User Management|Много польтелей
+User Name|польтелей упрежд
+Station Name|жаыход упрежд
+Last Login |Выход упрежд
+Product Name|Название продукта
+Packed Time|Упакованные Время
+Total Packed|Всего Упакованные
+New User|новое шибка
+Continue any Way|Продолжить
+------------------------------
+Scan|сканирование
+Role|роль
+Shipment|груз
+Home|дома
+Packing|упаковка
+Packer|упаковщик
+Image|образ
+Qty|Колво
+Complete|полный
+Box|коробка
+Pkd.|аков.
+Setting|установка
+Reports|Отчеты
+Cancel|отменить
+Welcome|приветствовать
+Location|расположение
+Language|язык
+Yes|да
+No|не
+Sec|раздел
+Min|Мин
+Hour|час
+----------------------------------
+Logout|Выход
+Login|упрежд
+Warning|Предупреждение
+Exit|Выход
+Error|ошибка
+user|шибка
+ by |ыход
+ on |ред
+ at |Пред
+OK|ладно
+Continue|Предупреждение
+Success|Предупре
+Save|редупре

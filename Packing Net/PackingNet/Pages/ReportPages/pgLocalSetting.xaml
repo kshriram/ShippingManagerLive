@@ -1,0 +1,99 @@
+﻿<Page x:Class="Packing_Net.Pages.PgTimeSetting"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="645" d:DesignWidth="1080"
+	Title="PgTimeSetting" Loaded="Page_Loaded_1">
+    <Grid Margin="0,6,0,-6">
+        <Border Background="#FFF3F3F3">
+            <Canvas Name="cvsMain"  Margin="30,65,65,155" >
+
+                <Border BorderBrush="Black" BorderThickness="2" Height="425" Width="985" CornerRadius="15">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFCDD1D3" Offset="0"/>
+                            <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+
+                <Border  BorderThickness="2" Height="235" Width="396" CornerRadius="15" Canvas.Left="559" Canvas.Top="63" BorderBrush="Black">
+                    <Canvas Margin="0,0,-23,0">
+                        <Canvas.Resources>
+                            <Style x:Key="lblNamestyle" TargetType="{x:Type Label}">
+                                <Setter Property="FontSize" Value="30"/>
+                                <Setter Property="Foreground" Value="#FF767676"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                            </Style>
+                            <Style x:Key="styClock" TargetType="{x:Type Label}">
+                                <Setter Property="FontSize" Value="40"/>
+                                <Setter Property="Foreground" Value="WhiteSmoke"/>
+                                <Setter Property="FontFamily" Value="OCR A Extended"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                            </Style>
+
+                        </Canvas.Resources>
+                        <Button  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" x:Name="btnHrAdd" Content="▲" FontSize="30" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="75" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF555555" Canvas.Left="9" Canvas.Top="7" Click="btnHrAdd_Click"/>
+                        <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" x:Name="btnHrSub" Content="▼" FontSize="30" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="75" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF555555" Canvas.Left="8" Canvas.Top="157" Click="btnHrSub_Click"/>
+                        <Label Style="{StaticResource styClock}" x:Name="lblHoures" Content="00"  Canvas.Left="16" Canvas.Top="76" Foreground="Black" />
+
+                        <Label x:Name="lblHGap" Content=":" FontSize="40" Canvas.Left="105" Canvas.Top="64" Foreground="Black" FontWeight="Bold"/>
+
+                        <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" x:Name="btnMinAdd" Content="▲" FontSize="30" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="75" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF555555" Canvas.Left="151" Canvas.Top="7" Click="btnMinAdd_Click"/>
+                        <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" x:Name="btnMinSub" Content="▼" FontSize="30" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="75" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF555555" Canvas.Left="150" Canvas.Top="157" Click="btnMinSub_Click"/>
+                        <Label Style="{StaticResource styClock}" x:Name="lblMin" Content="00" Canvas.Left="162" Canvas.Top="76" Foreground="Black" />
+
+                        <Label x:Name="lblMGap" Content=":" FontSize="40" Canvas.Left="254" Canvas.Top="64" Foreground="Black" FontWeight="Bold"/>
+
+                        <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" x:Name="btnSecAdd" Content="▲" FontSize="30" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="75" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF555555" Canvas.Left="286" Canvas.Top="7" Click="btnSecAdd_Click"/>
+                        <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" x:Name="btnSecSub" Content="▼" FontSize="30" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="75" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF555555" Canvas.Left="287" Canvas.Top="157" Click="btnSecSub_Click"/>
+                        <Label Style="{StaticResource styClock}" x:Name="lblSec" Content="00"  Canvas.Left="290" Canvas.Top="76" Foreground="#FF0F0F0F" />
+
+                        <Label Style="{StaticResource lblNamestyle}" HorizontalContentAlignment="Left" x:Name="lblSecl" Content="Sec"  Canvas.Left="292" Canvas.Top="116" Width="97" />
+                        <Label Style="{StaticResource lblNamestyle}" HorizontalContentAlignment="Left" x:Name="lblMinl" Content="Min" Canvas.Left="159" Canvas.Top="116" Width="116" />
+                        <Label Style="{StaticResource lblNamestyle}" HorizontalContentAlignment="Left" x:Name="lblHrl" Content="Hour"  Canvas.Left="6" Canvas.Top="116" Width="139" />
+                    </Canvas>
+                </Border>
+                <Label x:Name="lblLocation" Style="{StaticResource StyleFormTitle}"  HorizontalContentAlignment="Right" Content="Location :" Canvas.Left="5" Canvas.Top="22" Height="35" Width="279" Foreground="#FF323232"/>
+                <Label x:Name="lblLanguage" Style="{StaticResource StyleFormTitle}" HorizontalContentAlignment="Right" Content="Language :" Canvas.Left="10" Canvas.Top="85" Height="39" Width="279" Foreground="#FF323232"/>
+                <ComboBox Style="{StaticResource styleComboBox}" ItemsSource="{Binding}" DisplayMemberPath="LocationName" SelectedValue="{Binding Locations}" SelectedValuePath="LocationID" x:Name="cmbLocation" FontSize="20" Canvas.Left="289" Canvas.Top="22" Width="220" Height="39" Foreground="#FF0C0C0C" SelectionChanged="cmbLocation_SelectionChanged"/>
+                <ComboBox Style="{StaticResource styleComboBox}" ItemsSource="{Binding}" DisplayMemberPath="Language" SelectedValue="{Binding Languages}" SelectedValuePath="LanguageID" x:Name="cmbLanguage" FontSize="20" Canvas.Left="294" Canvas.Top="85" Width="220" Height="39" Foreground="#FF0C0C0C" SelectionChanged="cmbLanguage_SelectionChanged" />
+                <TextBlock x:Name="lblCLocation" Foreground="Black" FontSize="20" Canvas.Left="295" TextWrapping="Wrap" Text="-- Select Location --" Canvas.Top="27" Height="27" Width="180"/>
+                <TextBlock x:Name="lblCLanguage" Foreground="Black" FontSize="18" Canvas.Left="295" TextWrapping="Wrap" Text="-- Select Language --" Canvas.Top="91" Height="27" Width="180"/>
+                <Label Style="{StaticResource StyleFormTitle}"  HorizontalContentAlignment="Center" Content="Auto logout time " Canvas.Left="559" Canvas.Top="7" Foreground="#FF323232" Width="375" />
+
+                <Button TabIndex="8" Style="{StaticResource StyleButton}" x:Name="btnUpdate"  Content="Update" Canvas.Left="666" Canvas.Top="324"  Background="#FF494949" Foreground="White" Height="53" BorderBrush="{x:Null}" Width="140" Click="btnUpdate_Click" />
+                <Button TabIndex="8" Style="{StaticResource StyleButton}" x:Name="btnCancel" Content="Cancel" Canvas.Left="831" Canvas.Top="324"  Background="#FF494949" Foreground="White" Height="53" BorderBrush="{x:Null}" Width="140" Click="btnCancel_Click" />
+                <Canvas Height="46" Width="475" Canvas.Top="136">
+                    <Label x:Name="lblLanguage_Copy" Style="{StaticResource StyleFormTitle}" HorizontalContentAlignment="Right" Content="Display Barcode in Gird :" Foreground="#FF323232"/>
+                    <Canvas Height="45" Canvas.Left="262" Canvas.Top="-2" Width="185" >
+                        <RadioButton x:Name="RbtnYes" Content="Yes" RenderTransformOrigin="1,1" Canvas.Left="44" Canvas.Top="15" GroupName="Barcode" IsChecked="True" Click="RbtnYes_Click" >
+                            <RadioButton.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform X="17" Y="8"/>
+                                </TransformGroup>
+                            </RadioButton.RenderTransform>
+                        </RadioButton>
+                        <RadioButton x:Name="RbtnNo" Content="No"  RenderTransformOrigin="0.5,0.5" Canvas.Left="143" Canvas.Top="15" GroupName="Barcode" Click="RbtnNo_Click" >
+                            <RadioButton.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </RadioButton.RenderTransform>
+                        </RadioButton>
+                    </Canvas>
+                </Canvas>
+
+            </Canvas>
+        </Border>
+      
+    </Grid>
+</Page>

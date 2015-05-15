@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fc7a5913538249f4ae7c1a20a0dab270" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="x3v6Model1.Audit" Width="1.5" PointX="11.031569642495164" PointY="9.4744318916808954" />
+        <EntityTypeShape EntityType="x3v6Model1.BoxPackage" Width="1.5" PointX="0.78659802153082459" PointY="28.678135378602025" />
+        <EntityTypeShape EntityType="x3v6Model1.ErrorLog" Width="1.5" PointX="2.3934421587704877" PointY="20.349469939409509" />
+        <EntityTypeShape EntityType="x3v6Model1.Package" Width="1.5" PointX="8.2495802101910023" PointY="26.776506838750329" />
+        <EntityTypeShape EntityType="x3v6Model1.PackageDetail" Width="1.5" PointX="13.875" PointY="11" />
+        <EntityTypeShape EntityType="x3v6Model1.Role" Width="1.5" PointX="0.06242191608176656" PointY="1.2018371229999871" />
+        <EntityTypeShape EntityType="x3v6Model1.Shipping" Width="1.5" PointX="5.705545057405506" PointY="22.399499352276091" />
+        <EntityTypeShape EntityType="x3v6Model1.SKUImage" Width="1.5" PointX="10.75" PointY="23.75" />
+        <EntityTypeShape EntityType="x3v6Model1.Station" Width="1.5" PointX="0.38149603101494534" PointY="17.253089748906479" />
+        <EntityTypeShape EntityType="x3v6Model1.sysdiagram" Width="1.5" PointX="11.807201357468591" PointY="3.0703966035835428" />
+        <EntityTypeShape EntityType="x3v6Model1.Tracking" Width="1.5" PointX="9.1324642492143742" PointY="2.4511349659651214" />
+        <EntityTypeShape EntityType="x3v6Model1.User" Width="1.5" PointX="4.4073283115435995" PointY="6.4361673027445407" />
+        <EntityTypeShape EntityType="x3v6Model1.UserStation" Width="1.5" PointX="2.5648618017159692" PointY="23.7896260580931" />
+        <EntityTypeShape EntityType="x3v6Model1.Get_Shipping_Data" Width="1.5" PointX="14.375" PointY="2" />
+        <EntityTypeShape EntityType="x3v6Model1.getShippingDetail" Width="1.5" PointX="15.875" PointY="4" />
+        <AssociationConnector Association="x3v6Model1.FK_UserLogs_User" />
+        <AssociationConnector Association="x3v6Model1.FK_BoxPackage_Package" />
+        <AssociationConnector Association="x3v6Model1.FK_Tracking_BoxPackage" />
+        <AssociationConnector Association="x3v6Model1.FK_Package_Shipping" />
+        <AssociationConnector Association="x3v6Model1.FK_Package_Station" />
+        <AssociationConnector Association="x3v6Model1.FK_Package_User" />
+        <AssociationConnector Association="x3v6Model1.FK_PackageDetail_Package" />
+        <AssociationConnector Association="x3v6Model1.FK_Tracking_Package" />
+        <AssociationConnector Association="x3v6Model1.FK_User_Roles" />
+        <AssociationConnector Association="x3v6Model1.FK_Tracking_Shipping" />
+        <AssociationConnector Association="x3v6Model1.FK_Station_User" />
+        <AssociationConnector Association="x3v6Model1.FK_tblUserStation_tblStationMaster" />
+        <AssociationConnector Association="x3v6Model1.FK_UserStation_User" />
+        <EntityTypeShape EntityType="x3v6Model1.ReasonCategory" Width="1.5" PointX="10.369989204392763" PointY="17.482691936885328" />
+        <EntityTypeShape EntityType="x3v6Model1.Reason" Width="1.5" PointX="9.4799117434210665" PointY="14.596667013408927" />
+        <EntityTypeShape EntityType="x3v6Model1.Return" Width="1.5" PointX="3.8112720771745181" PointY="21.509166995766186" />
+        <EntityTypeShape EntityType="x3v6Model1.ReturnDetail" Width="1.5" PointX="7.1658710013916114" PointY="16.85611891041329" />
+        <EntityTypeShape EntityType="x3v6Model1.ReturnImage" Width="1.5" PointX="9.1713384264946622" PointY="21.302423755313466" />
+        <EntityTypeShape EntityType="x3v6Model1.RMAAudit" Width="1.5" PointX="2.947354536013377" PointY="16.94540501429951" />
+        <EntityTypeShape EntityType="x3v6Model1.SKUReason" Width="1.5" PointX="6.52215762926366" PointY="28.538081376132592" />
+        <EntityTypeShape EntityType="x3v6Model1.VersionRelease_RGA" Width="1.5" PointX="3.3066245146592261" PointY="19.6235143186634" />
+        <EntityTypeShape EntityType="x3v6Model1.VersionReleased" Width="1.5" PointX="2.2721521920860521" PointY="17.65576129483793" />
+        <AssociationConnector Association="x3v6Model1.FK_Transaction_Reasons" />
+        <AssociationConnector Association="x3v6Model1.FK_ReturnImages_ReturnDetail" />
+        <AssociationConnector Association="x3v6Model1.FK_Transaction_ReturnDetail" />
+        <EntityTypeShape EntityType="x3v6Model1.CartonInfo" Width="1.5" PointX="4.5" PointY="15.875" />
+        <EntityTypeShape EntityType="x3v6Model1.PalletDetail" Width="1.5" PointX="8.89387990203401" PointY="16.678333275335994" />
+        <EntityTypeShape EntityType="x3v6Model1.PalletInfo" Width="1.5" PointX="3.7729486747518872" PointY="16.76728426700797" />
+        <EntityTypeShape EntityType="x3v6Model1.ReturnedSKU_Reason_Points" Width="1.5" PointX="3.6890937013966463" PointY="28.299104465310975" />
+        <EntityTypeShape EntityType="x3v6Model1.RMAComment" Width="1.5" PointX="11.926993746276477" PointY="14.330794579503497" />
+        <AssociationConnector Association="x3v6Model1.FK_PalletDetail_PalletDetail" />
+        <AssociationConnector Association="x3v6Model1.FK_ReturnedSKU_Reason_Points_Return" />
+        <AssociationConnector Association="x3v6Model1.FK_RMAComments_Return" />
+        <AssociationConnector Association="x3v6Model1.FK_ReturnedSKU_Reason_Points_ReturnDetail" />
+        <AssociationConnector Association="x3v6Model1.FK_RMAComments_User" />
+        <EntityTypeShape EntityType="x3v6Model1.getShippingDetails_LTL_Non_FEDEX_UPS" Width="1.5" PointX="15.75" PointY="24.125" />
+        <EntityTypeShape EntityType="x3v6Model1.Shipping_Box_Data" Width="1.5" PointX="6.1173349740530067" PointY="21.334876353542729" />
+        <EntityTypeShape EntityType="x3v6Model1.Shipping_Box_Data_FEDEX" Width="1.5" PointX="8.6097055899955812" PointY="7.8280599749777746" />
+        <EntityTypeShape EntityType="x3v6Model1.Shipping_Box_Data_UPS" Width="1.5" PointX="5.9824696881614949" PointY="12.225071122974656" />
+        <EntityTypeShape EntityType="x3v6Model1.Shipping_Box_Details_Data" Width="1.5" PointX="1.2281317697968948" PointY="5.1997587257995077" />
+        <EntityTypeShape EntityType="x3v6Model1.DeletedBoxSave" Width="1.5" PointX="7.10564004774468" PointY="27.192253706600635" />
+        <EntityTypeShape EntityType="x3v6Model1.ProductDimension" Width="1.5" PointX="5.2495003348446918" PointY="8.623744000039876" />
+        <EntityTypeShape EntityType="x3v6Model1.DeletedPalletSave" Width="1.5" PointX="6.1829986973586486" PointY="1.0446831141806594" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

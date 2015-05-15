@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackingClassLibrary", "PackingClassLibrary\PackingClassLibrary.csproj", "{AFA721AB-6DCD-49C4-A51B-7B292D644CD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackingNet", "PackingNet\PackingNet.csproj", "{F3163175-2540-46D0-9F0B-C55994BF2F50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFA721AB-6DCD-49C4-A51B-7B292D644CD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA721AB-6DCD-49C4-A51B-7B292D644CD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA721AB-6DCD-49C4-A51B-7B292D644CD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA721AB-6DCD-49C4-A51B-7B292D644CD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3163175-2540-46D0-9F0B-C55994BF2F50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3163175-2540-46D0-9F0B-C55994BF2F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3163175-2540-46D0-9F0B-C55994BF2F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3163175-2540-46D0-9F0B-C55994BF2F50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

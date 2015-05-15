@@ -1,0 +1,95 @@
+﻿Are you sure want to logout?|Are you sure want to logout?
+Are you sure want to Exit?|Are you sure want to Exit?
+Session Expired|Session Expired
+Session expired. Please login again to Continue...|Session expired. Please login again to Continue...
+Not previous user|Not previous user
+You are not previously logged User.|You are not previously logged User.
+Access denied|Access denied
+Incorrect User Name.|Incorrect User Name.
+Shipment is under packing.|Shipment is under packing.
+ is packing The Shipment at station | is paking The Shipment at station 
+Shipment is already packed| Shipment is already packed
+Please Check the Shipment ID!|Please Check the Shipment ID!
+not exists.|not exists.
+Manager Override|Manager Override
+Manager override required.|Manager override required.
+Please scan your badge.|Please scan your badge.
+Update|Update
+Setting Updated Successfully.|Setting Updated Successfully.
+Setting Updation fail.|Setting Updation fail.
+Record Upadate successfull.|Record Upadate successfull.
+Record Upadate Fail.|Record Upadate Fail.
+item(s) packed out of|item(s) packed out of
+item(s).|item(s).
+Save Fail! Transaction Rollback Successful.|Save Fail! Transaction Rollback Successful.
+Shipment packing Completed.|Shipment packing Completed.
+Save Successfull!|Save Successfull!
+Extra Packing!|Extra Packing!
+Required quantiy of this product is paked.|Required quantiy of this product is paked.
+Please do not pack this Product.|Please do not pack this Product.
+Wrong Product!|Wrong Product!
+The Product |The Product 
+is not belongs to this shipment.|is not belongs to this shipment.
+Product not found|Product not found
+No product Found for this Code|No product Found for this Code
+Exiting shipment will clear this shipment information.|Exiting shipment will clear this shipment information.
+Are you sure want to exit shipment?|Are you sure want to exit shipment?
+You are not authorised to override.|You are not authorised to override.
+Please re-scan badge.|Please re-scan badge.
+Setting Save Successfully.|Setting Save Successfully.
+Setting Updated Successfully.|Setting Updated Successfully.
+-------new adds-------------
+To apply the setting Application Need to restart.|To apply the setting Application Need to restart.
+Are you sure want to Re-start Application?|Are you sure want to Re-start Application?
+Avg. Packing BoxTime(in Sec) |Avg. Packing BoxTime(in Sec)
+Please scan your Shipment|Please scan your Shipment
+Local App Setting|Local App Setting
+Auto logout time|Auto logout time
+User Management|User Management
+User Name|User Name
+Station Name|Station Name
+Last Login |Last Login 
+Product Name|Product Name
+Packed Time|Packed Time
+Total Packed|Total Packed
+New User|New User
+Continue any Way|Continue any Way
+-------------------------------------
+Scan|Scan
+Role|Role
+Shipment|Shipment
+Home|Home
+Packing|Packing
+Packer|Packer
+Image|Image
+Qty|Qty
+Complete|Complete
+Box|Box
+Pkd.|Pkd.
+Setting|Setting
+Reports|Reports
+Cancel|Cancel
+Welcome|Welcome
+Location|Location
+Language|Language
+Yes|Yes
+No|No
+Sec|Sec
+Min|Min
+Hour|Hour
+----------------------------------
+Update|Update
+Save|Save
+Logout|Logout
+Warning|Warning
+Exit|Exit
+Error|Error
+user | user 
+by |by 
+on |on 
+at |at 
+Continue|Continue
+Success|Success
+Login|Login
+
+ 

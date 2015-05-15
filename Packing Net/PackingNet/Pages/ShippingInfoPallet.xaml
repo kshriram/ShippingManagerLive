@@ -1,0 +1,90 @@
+﻿<Window x:Class="PackingNet.Pages.ShippingInfoPallet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         Loaded="Window_Loaded_1"
+        Title="ShippingInfoPallet" Height="900" Width="1280" WindowState="Maximized" WindowStartupLocation="CenterScreen"  >
+    <Viewbox>
+        <Grid >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35*"/>
+                <RowDefinition Height="150*"/>
+            </Grid.RowDefinitions>
+            <Border Margin="70,49,130,91" Grid.Row="1">
+
+                <DataGrid Name="dtPalletsBoxes" Margin="26,58,26,20"
+                      SelectionMode="Extended" ItemsSource="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Center"
+        								Width="1000" ScrollViewer.CanContentScroll="False" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+        								ScrollViewer.VerticalScrollBarVisibility="Auto" CanUserAddRows="False" 	AutoGenerateColumns="False" 
+        								FontSize="17"    Background="#FFFBFBFB"        								 
+        								SelectionUnit="FullRow" 
+        								BorderThickness="1" 
+        								Cursor="Hand"   
+        								BorderBrush="Black"
+        								HorizontalGridLinesBrush="#FF575757" 
+        								VerticalGridLinesBrush="Gray"
+        								Height="503"  
+        								SelectedIndex="-1"  Grid.ColumnSpan="1" RowHeight="40" >
+                    <DataGrid.Columns>
+
+                        <DataGridTemplateColumn Header="Print" Width="100" >
+                            <DataGridTemplateColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTemplateColumn.HeaderStyle>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate >
+
+                                    <Button x:Name="btnPrint" Width="80" Content="Print" Height="30"  Click="btnPrint_Click">
+                                    </Button>
+
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Binding="{Binding PalletNumber}" Header="PalletNumber"  Width="200" IsReadOnly="True" FontSize="20">
+                            <DataGridTextColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.HeaderStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding BoxNumber}" Header="BoxNumber"  Width="200" IsReadOnly="True" FontSize="20">
+                            <DataGridTextColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.HeaderStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding SKUNumber}" Header="SKU"  Width="350" IsReadOnly="True" FontSize="20">
+                            <DataGridTextColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.HeaderStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding SKUQty}" Header="Quantity"  Width="150" IsReadOnly="True" FontSize="20">
+                            <DataGridTextColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.HeaderStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </Border>
+            <Border Margin="50,12,50,666" Grid.Row="1">
+                <Canvas Margin="10 10 10 10">
+                    <Label Name="lblReprint" Style="{StaticResource StyleLbl}" Width="340" Height="38" FontFamily="Arial" FontSize="25" Content="Re-print Shipment Details" Foreground="Red" FontWeight="Bold" Canvas.Left="434" Canvas.Top="-20" />
+                    <Label Name="lblShipScan" Style="{StaticResource StyleLbl}" Width="340" Height="50" FontFamily="Arial" FontSize="25" Content="Please Scan your Shipment" FontWeight="Bold" Canvas.Left="55" Canvas.Top="18" />
+                    <TextBox Name="txtShipmentScan" Width="400" Height="50" Canvas.Left="399" FontSize="25" Canvas.Top="20"/>
+                    <Button Name="btnGo" Click="btnGO_Click" Style="{StaticResource StyleReportButton}" Content="GO" Width="100" Height="50" FontWeight="Bold" Canvas.Left="830" RenderTransformOrigin="0.3,0.4" Canvas.Top="20"/>
+                    <Button Name="btnRefresh" Click="btnRefresh_Click" Style="{StaticResource StyleReportButton}" Content="Refresh" Width="100" Height="50" FontWeight="Bold" Canvas.Left="950" Canvas.Top="20"/>
+                </Canvas>
+            </Border>
+            <Button Name="btnClose" Content="Close" Click="btnClose_Click" Style="{StaticResource StyleReportButton}" HorizontalAlignment="Left" FontWeight="Bold" Margin="1130,42,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Height="50"/>
+        </Grid>
+    </Viewbox>
+
+</Window>

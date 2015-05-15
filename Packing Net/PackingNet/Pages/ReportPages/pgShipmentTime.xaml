@@ -1,0 +1,159 @@
+﻿<Page x:Class="Packing_Net.Pages.ReportPages.pgShipmentTime"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="623" d:DesignWidth="1021"
+	Title="pgShipmentTime" Name="pgShipment">
+    <Page.Resources>
+        <Style x:Key="StyleLabelConstants" TargetType="Label">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+        <Style x:Key="StyleLabelVeriabels" TargetType="Label">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style x:Key="StyleLabelHeaders" TargetType="Label">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="#FFFFFCFC">
+        <Canvas Name="cvsMain" Background="White">
+            <Border Width="1021">
+                <Canvas Name="cvsFilters" Height="165" Background="#FF5D5D5D">
+                    <ComboBox TabIndex="7" IsReadOnly="True"  ItemsSource="{Binding lsUserMaser}" SelectedValue="{Binding UserID}" DisplayMemberPath="UserFullName" SelectedValuePath="UserID" FontSize="20" x:Name="cmbUserNames"  Canvas.Left="185" Canvas.Top="26" Width="257" Height="41" SelectionChanged="cmbUserNames_SelectionChanged" />
+                    <TextBlock x:Name="lblCUserName" FontSize="20" IsHitTestVisible="False" Text="--Select User Name--" Canvas.Left="190" Canvas.Top="32"/>
+                    <Label Content="User Name :" Name="lblUserName" Style="{StaticResource StyleReportLabel}"  Height="Auto" Canvas.Top="30" Canvas.Left="58" />
+                    <ComboBox TabIndex="7" IsReadOnly="True"  ItemsSource="{Binding }"  DisplayMemberPath="ShippingNumber" SelectedValuePath="PackingID" FontSize="20" x:Name="cmbShipmentID"  Canvas.Left="185" Canvas.Top="114" Width="257" Height="41" SelectionChanged="cmbShipmentID_SelectionChanged" />
+                    <TextBlock x:Name="lblCShipmentID"  FontSize="20" IsHitTestVisible="False" Text="--Select Shipment ID--" Canvas.Left="190" Canvas.Top="122"/>
+                    <Label Name="lblShipmentID" Content="Shipment ID :" Style="{StaticResource StyleReportLabel}"  Height="Auto" Canvas.Top="122" Canvas.Left="49" />
+                    <ComboBox TabIndex="7" IsReadOnly="True" FontSize="20" x:Name="cmbShipmentStatus"  Canvas.Left="656" Canvas.Top="26" Width="257" Height="41" SelectionChanged="cmbShipmentStatus_SelectionChanged"  ItemsSource="{Binding}" DisplayMemberPath="Status" SelectedValue="{Binding ID}" SelectedValuePath="ID"/>
+                    <TextBlock  x:Name="lblCShipmentStaus" FontSize="20" IsHitTestVisible="False" Text="--Select Status--" Canvas.Left="661" Canvas.Top="32"/>
+                    <Label Name="lblStatus" Content="Shipment Status :" Style="{StaticResource StyleReportLabel}"  Height="Auto" Canvas.Top="34" Canvas.Left="488" />
+                </Canvas>
+            </Border>
+            <DatePicker TabIndex="2"  x:Name="dtpFromDate"  Canvas.Left="185" Canvas.Top="73" Height="42" Width="279" FontSize="22" BorderBrush="{x:Null}" SelectedDateFormat="Short" Text="a"  SelectedDateChanged="dtpDate_SelectedDateChanged"  />
+            <Label Name="lblFrom" HorizontalContentAlignment="Right"  Content="From :" Style="{StaticResource StyleReportLabel}"  Height="Auto" Canvas.Left="47" Canvas.Top="77" Width="133" />
+            <DockPanel Height="461" LastChildFill="False" Canvas.Top="162" Width="1021">
+                <Border BorderThickness="0,0,4,0" BorderBrush="#FF616161" Width="345">
+                    <Canvas Canvas.Left="115" Canvas.Top="410" Margin="0,0,-4,0">
+                        <Label HorizontalContentAlignment="Right" Style="{StaticResource StyleLabelConstants}" Content="Total Shipments Packed:" Width="210" Canvas.Top="41" Canvas.Left="2"/>
+                        <Label Name="lblTotalPacked" HorizontalContentAlignment="Left" Style="{StaticResource StyleLabelVeriabels}" Content="140" Width="70" Canvas.Left="212" Canvas.Top="41"/>
+                        <Label Name="lblTime" HorizontalContentAlignment="Left" Style="{StaticResource StyleLabelVeriabels}" Content="140" Canvas.Top="72" Width="210" Canvas.Left="132"/>
+                        <Label HorizontalContentAlignment="Right" Style="{StaticResource StyleLabelConstants}" Content="Time Required:" Canvas.Top="72" Width="130" Canvas.Left="2"/>
+                        <Label HorizontalContentAlignment="Center" Style="{StaticResource StyleLabelHeaders}" Content="Shipment List" Canvas.Top="3" Width="341" Height="35" Background="#FF05AEEE"/>
+                        <DataGrid  Name="dgvShipmentPackedList"
+                       AutoGenerateColumns="False"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Height="352"
+                Width="342" 
+                Background="{x:Null}"
+                Canvas.Top="109"
+                ItemsSource="{Binding}"
+                ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                       CanUserAddRows="False"
+                       CanUserResizeColumns="False"
+                                   HorizontalGridLinesBrush="#FF474747" 
+                                   VerticalGridLinesBrush="{x:Null}" 
+                                   GridLinesVisibility="Horizontal" 
+                                   SelectionMode="Single" SelectionChanged="dgvShipmentPackedList_SelectionChanged" >
+                            <DataGrid.ColumnHeaderStyle >
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="FontSize" Value="17"/>
+                                    <Setter Property="FontWeight" Value="Bold"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                    <Setter Property="FontFamily" Value="Arial"/>
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel>
+                                                <TextBlock Text="Select  " Height="35" FontSize="15" FontWeight="Bold" FontFamily="Arial"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+
+                                <DataGridTextColumn IsReadOnly="True" Header="ShipmentID" Binding="{Binding ShippingNumber }" Width="110" FontSize="15" Foreground="#FF04266E"  />
+                                <DataGridTextColumn IsReadOnly="True" Header="Time" Binding="{Binding TimeSpend}" Width="100" FontSize="15"  Foreground="#FF04266E" />
+                                <DataGridTextColumn IsReadOnly="True" Header="Qty." Binding="{Binding Quantity}" Width="60" FontSize="15"  Foreground="#FF04266E" />
+                                <DataGridTextColumn IsReadOnly="True" Header="" Binding="{Binding PackingID}" Width="0"   Foreground="{x:Null}" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Canvas>
+                </Border>
+            </DockPanel>
+            <Canvas Height="458" Canvas.Left="340" Canvas.Top="165" Width="681">
+                <DataGrid  Name="dgvPackedDetailsList"
+                       AutoGenerateColumns="False"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Height="285"
+                Width="675" 
+                Background="{x:Null}"
+                Canvas.Top="175"
+                ItemsSource="{Binding}"
+                ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                CanUserAddRows="False"
+                CanUserResizeColumns="False"
+                HorizontalGridLinesBrush="#FF474747" 
+                VerticalGridLinesBrush="{x:Null}" 
+                GridLinesVisibility="Horizontal" 
+                           IsReadOnly="True"
+                SelectionMode="Single" SelectionChanged="dgvShipmentPackedList_SelectionChanged" Canvas.Left="6" >
+                    <DataGrid.ColumnHeaderStyle >
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="FontSize" Value="17"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="FontFamily" Value="Arial"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn IsReadOnly="True"  Header="BoxNumber" Binding="{Binding BoxNumber}" Width="130" FontSize="14"  Foreground="#FF04266E" />
+                        <DataGridTextColumn IsReadOnly="True"  Header="SKU Name" Binding="{Binding SKUNumber}" Width="130" FontSize="14"  Foreground="#FF04266E" />
+                        <DataGridTextColumn  IsReadOnly="True" Header="Qty." Binding="{Binding SKUQuantity}" Width="60" FontSize="14"  Foreground="#FF04266E" />
+                        <DataGridTextColumn IsReadOnly="True" Header="Item Scan Time" Binding="{Binding PackingDetailStartDateTime}" Width="150" FontSize="14"  Foreground="#FF04266E" />
+                        <!--<DataGridTextColumn IsReadOnly="True" Header="Box Qty." Binding="{Binding BoxQuantity}" Width="80" FontSize="14"  Foreground="#FF04266E" />-->
+                        <DataGridTextColumn IsReadOnly="True" Header="Location" Binding="{Binding ShipmentLocation}" Width="100" FontSize="14"  Foreground="#FF04266E" />
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Canvas Background="#FFAEAEAE" Height="175" Width="675" Canvas.Left="6" Canvas.Top="1" >
+                    <Label HorizontalContentAlignment="Center"  Style="{StaticResource StyleLabelHeaders}" Content="Shipment Details" Width="675" Height="35" Background="#FF05AEEE"/>
+                    <Label HorizontalContentAlignment="Right" Style="{StaticResource StyleLabelConstants}" Content="Shipment ID:" Canvas.Top="35" Width="115" Canvas.Left="24"/>
+                    <Label x:Name="lblDShipmentID" HorizontalContentAlignment="Left" Style="{StaticResource StyleLabelVeriabels}" Content="SHXXXXXX" Canvas.Top="35" Width="147" Canvas.Left="136"/>
+                    <Label HorizontalContentAlignment="Right" Style="{StaticResource StyleLabelConstants}" Content="Packing Status:" Canvas.Top="69" Width="145" Canvas.Left="-6"/>
+                    <Label x:Name="lblDStatus" HorizontalContentAlignment="Left" Style="{StaticResource StyleLabelVeriabels}" Content="Partially Packed" Canvas.Top="69" Width="160" Canvas.Left="136"/>
+                    <Label HorizontalContentAlignment="Right" Style="{StaticResource StyleLabelConstants}" Content="User Name:" Canvas.Top="33" Width="110" Canvas.Left="302"/>
+                    <Label x:Name="lblDUserName" HorizontalContentAlignment="Left" Style="{StaticResource StyleLabelVeriabels}" Content="Avinash Patil" Canvas.Top="35" Width="286" Canvas.Left="412"/>
+                    <Label HorizontalContentAlignment="Right" Style="{StaticResource StyleLabelConstants}" Content="Packing Time :" Canvas.Top="69" Width="126" Canvas.Left="286"/>
+                    <Label x:Name="lblDTime" HorizontalContentAlignment="Left" Style="{StaticResource StyleLabelVeriabels}" Content="00:00:00" Canvas.Top="69" Width="160" Canvas.Left="412"/>
+                    <Label HorizontalContentAlignment="Right" Style="{StaticResource StyleLabelConstants}" Content="Total SKU Qty:" Canvas.Top="100" Width="135" Canvas.Left="4"/>
+                    <Label x:Name="lblDItem" HorizontalContentAlignment="Left" Style="{StaticResource StyleLabelVeriabels}" Content="50" Canvas.Top="100" Width="160" Canvas.Left="139"/>
+                    <Label HorizontalContentAlignment="Right" Style="{StaticResource StyleLabelConstants}" Content="Location :" Canvas.Top="100" Width="87" Canvas.Left="325"/>
+                    <Label x:Name="lblDLocation" HorizontalContentAlignment="Left" Style="{StaticResource StyleLabelVeriabels}" Content="50" Canvas.Top="100" Width="160" Canvas.Left="412"/>
+                    <Label HorizontalContentAlignment="Right" Style="{StaticResource StyleLabelConstants}" Content="Is Override?:" Canvas.Top="133" Width="135" Canvas.Left="4"/>
+                    <Label x:Name="lblDoverride" HorizontalContentAlignment="Left" Style="{StaticResource StyleLabelVeriabels}" Content="50" Canvas.Top="134" Width="160" Canvas.Left="139"/>
+
+                </Canvas>
+            </Canvas>
+            <DatePicker TabIndex="2"  x:Name="dtpToDate"  Canvas.Left="656" Canvas.Top="73" Height="42" Width="279" FontSize="22" BorderBrush="{x:Null}" SelectedDateFormat="Short" Text="a"  SelectedDateChanged="dtpDate_SelectedDateChanged"  />
+            <Label Name="lblTo" HorizontalContentAlignment="Right"  Content="To :" Style="{StaticResource StyleReportLabel}"  Height="Auto" Canvas.Left="523" Canvas.Top="77" Width="133" />
+        </Canvas>
+    </Grid>
+
+</Page>

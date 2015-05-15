@@ -1,0 +1,60 @@
+﻿<Window x:Class="PackingNet.wndSummaryReports"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         WindowState="Maximized"
+         WindowStartupLocation="CenterScreen" 
+     ShowInTaskbar="True"  Icon="/PackingNet;component/box1.ico" 
+        Title="Shipment Summary" Height="760" Width="1280">
+    <Grid>
+        <TextBlock  Text="Shipment Summary" Margin="485,-7,587,705"  Height="32" Width="200" Canvas.Left="150" FontSize="20" RenderTransformOrigin="0.504,0.555" Background="{x:Null}" Foreground="#FFD11A11" FontWeight="Bold" Canvas.Top="1" />
+        <TextBox Name="txtScannSKu" Height="39" Canvas.Left="845" TextWrapping="Wrap" Canvas.Top="-50" Width="293" KeyDown="txtScannSKu_KeyDown_1" Opacity="0" Margin="198,656,782,36"/>
+        <DataGrid  Name="dgvSummaryReports"
+                       AutoGenerateColumns="False"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+               Height="475"
+                Width="1180"
+                Background="{x:Null}"
+                Canvas.Top="175"
+                ItemsSource="{Binding}"
+                ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                CanUserAddRows="False"
+                CanUserResizeColumns="False"
+                HorizontalGridLinesBrush="#FF474747" 
+                VerticalGridLinesBrush="{x:Null}" 
+                GridLinesVisibility="Horizontal" 
+                           IsReadOnly="True"
+                SelectionMode="Single"  Canvas.Left="6" Margin="46,85,46,170" >
+            <DataGrid.ColumnHeaderStyle >
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="FontSize" Value="25"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="FontFamily" Value="Arial"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True"  Header="BoxNumber" Binding="{Binding BoxNumber}" Width="280" FontSize="20"  Foreground="#FF04266E" />
+                <DataGridTextColumn IsReadOnly="True"  Header="SKU Name" Binding="{Binding SKUNumber}" Width="250" FontSize="20"  Foreground="#FF04266E" />
+                <DataGridTextColumn  IsReadOnly="True" Header="Qty." Binding="{Binding SKUQuantity}" Width="60" FontSize="20"  Foreground="#FF04266E" />
+                <!--<DataGridTextColumn IsReadOnly="True" Header="Item Scan Time" Binding="{Binding PackingDetailStartDateTime}" Width="150" FontSize="14"  Foreground="#FF04266E" />-->
+                <!--<DataGridTextColumn IsReadOnly="True" Header="Box Qty." Binding="{Binding BoxQuantity}" Width="80" FontSize="14"  Foreground="#FF04266E" />-->
+                <!--<DataGridTextColumn IsReadOnly="True" Header="Location" Binding="{Binding ShipmentLocation}" Width="100" FontSize="14"  Foreground="#FF04266E" />-->
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="" x:Name="lblShipmentNo" Style="{StaticResource StyleFormTitle}"  Canvas.Top="45" Height="38" FontSize="23" Margin="245,47,672,645" Canvas.Left="723" Foreground="Black" FontWeight="Bold"/>
+        <Label Content="" x:Name="lblPONumber" Style="{StaticResource StyleFormTitle}" Canvas.Left="1023" Canvas.Top="45" Height="38" FontSize="23" Margin="915,45,47,647"  Foreground="Black" FontWeight="Bold"/>
+        <TextBlock  x:Name="txtStatus" Text="Shipment Status" Margin="528,23,347,675"  Height="32" FontSize="23" RenderTransformOrigin="0.504,0.555" Background="{x:Null}" Foreground="Black" FontWeight="Bold" />
+        <Canvas Margin="28,-15,37,150">
+            <Border Height="70" Canvas.Left="429" Canvas.Top="650" Width="493" RenderTransformOrigin="0.493,0.857">
+            <Button x:Name="btnCancelShipment" 
+            Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
+            Content="Exit" HorizontalAlignment="Center" 
+            VerticalAlignment="Top" Width="165" Height="58" 
+            Background="#FF3E3E40" Foreground="White" BorderBrush="{x:Null}" 
+            FontSize="18" Canvas.Left="56" Canvas.Top="10" OpacityMask="#FFB45959" Click="btnCancelShipment_Click_1" />
+            </Border>
+        </Canvas>
+    </Grid>
+</Window>

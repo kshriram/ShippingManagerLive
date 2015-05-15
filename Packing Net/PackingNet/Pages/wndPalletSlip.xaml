@@ -1,0 +1,182 @@
+﻿<Window x:Class="PackingNet.Pages.wndPalletSlip"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="wndPalletSlip" Height="8.23in" Width="3.95in">
+    <Window.Resources>
+        <Style TargetType="{x:Type Image}" x:Key="styBarcode">
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Stretch" Value="Fill"/>
+        </Style>
+        <Style TargetType="{x:Type Label}" x:Key="styBlabel">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="9"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Height" Value="19"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="styConstant" >
+            <Setter Property="FontSize" Value="10"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="styVeriable" >
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
+    </Window.Resources>
+    <Border Background="White" BorderBrush="Black" BorderThickness="1,1,1,0" Margin="4" Loaded="Border_Loaded_1">
+        <Canvas >
+            <Canvas.Background>
+                <ImageBrush  Stretch="Uniform" Opacity="0.07"/>
+            </Canvas.Background>
+            <Border BorderBrush="Black" BorderThickness="0,0,1,0" Height="196" Width="162" Canvas.Left="2" Canvas.Top="1">
+                <Canvas>
+                    <Image HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="161" Source="/PackingNet;component/Images/PrintLogo.png" Opacity="0.7"/>
+
+                    <TextBlock TextWrapping="Wrap" Name="tbCWarehouseName" Text="Warehouse :" Canvas.Top="64" Width="67" Style="{StaticResource styConstant}" Canvas.Left="-1"/>
+                    <TextBlock TextWrapping="Wrap" Name="tbWarehouse" Text="null" Canvas.Top="64" Width="105" Canvas.Left="56" Style="{StaticResource styVeriable}"/>
+
+                    <TextBlock TextWrapping="Wrap" Name="tbCDealer" Text="Dealer :" Canvas.Top="135" Width="43" Style="{StaticResource styConstant}" Height="16"/>
+                    <TextBlock TextWrapping="Wrap"  Name="tbDealer" Text="null" Canvas.Top="136" Width="113" Canvas.Left="42" Style="{StaticResource styVeriable}" Height="37"/>
+
+                    <TextBlock TextWrapping="Wrap" Name="tbCCustomerPO" Text="Customer PO :" Canvas.Top="83" Width="74" Style="{StaticResource styConstant}" Height="16"/>
+                    <TextBlock TextWrapping="Wrap" Name="tbPoNum" Text="null" Canvas.Top="83" Width="88" Canvas.Left="72" Style="{StaticResource styVeriable}"/>
+                    <TextBlock TextWrapping="Wrap" Name="tbPackingTime" Text="Oct 12, 2013 12:10 PM" Canvas.Top="48" Width="165" Canvas.Left="-3" Style="{StaticResource styVeriable}"/>
+
+                    <TextBlock TextWrapping="Wrap" Name="tbCPackageBox" Text="Total No. of Box(s) in pallet :" Canvas.Top="118" Width="132" Style="{StaticResource styConstant}"/>
+                    <TextBlock TextWrapping="Wrap" Name="tbPackageBox" Text="1" Canvas.Top="120" Width="13" Canvas.Left="133" Style="{StaticResource styVeriable}" RenderTransformOrigin="2.231,0.451"/>
+
+                    <Rectangle Height="1"  Stroke="#FF000000" StrokeThickness="1" Canvas.Top="197" Width="355" RenderTransformOrigin="0.5,0.5" Canvas.Left="-3">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Height="1"  Stroke="#FF000000" StrokeThickness="1" Canvas.Top="47" Width="165" RenderTransformOrigin="0.5,0.5" Canvas.Left="-3">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                </Canvas>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="0,0,1,0" Height="50" Width="162" Canvas.Left="2" Canvas.Top="1">
+                <Canvas>
+                    <Image HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="161" Source="/PackingNet;component/Images/PrintLogo.png" Opacity="0.7"/>
+                    <Rectangle Height="1"  Stroke="#FF000000" StrokeThickness="1" Canvas.Top="47" Width="165" RenderTransformOrigin="0.5,0.5" Canvas.Left="-3">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                </Canvas>
+            </Border>
+            <DataGrid x:Name="dgSKUinfo" 
+            		ItemsSource="{Binding}" 
+            		HorizontalAlignment="Center" 
+            		Width="340" Height="379" 
+            		CanUserAddRows="False" 
+            		ScrollViewer.CanContentScroll="False" 
+            		ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+            		ScrollViewer.HorizontalScrollBarVisibility="Disabled" AutoGenerateColumns="False" HorizontalGridLinesBrush="#FF4B4B4B" VerticalGridLinesBrush="#FF4B4B4B" Background="{x:Null}" GridLinesVisibility="Horizontal" IsSynchronizedWithCurrentItem="False" BorderBrush="{x:Null}" Canvas.Top="231" Canvas.Left="2"  >
+                <DataGrid.Columns>
+
+                    <!--<DataGridTextColumn Binding="{Binding ShipmentNumber}" FontSize="9" Header="Shipment Number" Width="100" MinWidth="120">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                <Setter Property="FontSize" Value="11"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="Width" Value="275"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="HorizontalAlignment" Value="Left" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>-->
+
+                    <DataGridTextColumn Binding="{Binding BoxNumber}" FontSize="9" Header="BOX Number" Width="250" MinWidth="150">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                <Setter Property="FontSize" Value="11"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="Width" Value="275"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="HorizontalAlignment" Value="Left" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding SKUQuantity}" FontSize="9" Header="SKU Qty" Width="*">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                <Setter Property="FontSize" Value="11"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="Width" Value="60"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="HorizontalAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Border BorderBrush="Black" BorderThickness="0" Height="125" Canvas.Top="624" Width="346" Canvas.Left="1" >
+                <Canvas Margin="0,3,0,-3" Height="125" VerticalAlignment="Top">
+                    <Image x:Name="imgPalletNumber" Style="{StaticResource styBarcode}" Canvas.Left="48" Width="270" Stretch="Uniform" Height="105" Canvas.Top="5"/>
+                    <Label x:Name="lblPalletNumber" Content="PLT2145355" Canvas.Left="47" Canvas.Top="109" Style="{StaticResource styBlabel}" RenderTransformOrigin="0.5,-0.053" Width="80" />
+
+                    <Label x:Name="lblNote" Content="Note : for internal use only." Canvas.Left="152" Canvas.Top="108" Style="{StaticResource styBlabel}" RenderTransformOrigin="0.5,-0.053" Width="124" />
+
+                    <Label x:Name="lblNote2" Content="Note : for internal use only." Canvas.Left="8" Style="{StaticResource styBlabel}" RenderTransformOrigin="0.5,-0.053" Width="124" Canvas.Top="-453" />
+
+
+                    <Label x:Name="lblBDate" HorizontalContentAlignment="Right" Content="26 Sep,2013 12:22 AM" Canvas.Left="-53" Style="{StaticResource styBlabel}" RenderTransformOrigin="0.5,-0.053" Height="24" Canvas.Top="65" Width="107" >
+                        <Label.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-90.527"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Label.RenderTransform>
+                    </Label>
+                </Canvas>
+            </Border>
+            <Image x:Name="imgBOxNumTop" Height="70" Style="{StaticResource styBarcode}" Width="150"  Canvas.Top="2" Stretch="Uniform" Canvas.Left="170"/>
+            <Label x:Name="lblBoxTupNumber" HorizontalContentAlignment="Left" Content="PO23523465236" Canvas.Left="204" Canvas.Top="80" Style="{StaticResource styBlabel}" RenderTransformOrigin="0.944,0.526" Width="100" />
+            <Label x:Name="lblCBoxNumber" Content="Pallet # :" HorizontalContentAlignment="Left" Style="{StaticResource styBlabel}" Height="19" Canvas.Left="166" Canvas.Top="80" Width="43" />
+            <Image x:Name="imgShipping" Height="30" Width="180" RenderTransformOrigin="0.5,0.5" Canvas.Left="168" Canvas.Top="95"/>
+            <Label x:Name="lblShipment" HorizontalContentAlignment="Left" Content="SH2145355" Canvas.Left="231" Canvas.Top="125" Style="{StaticResource styBlabel}" RenderTransformOrigin="0.5,0.5" Width="110" />
+            <Label x:Name="lblCShippin" Content="SHIPMENT# :" HorizontalContentAlignment="Left" Style="{StaticResource styBlabel}" Height="19" Canvas.Left="166" Canvas.Top="125" Width="73" />
+            <Image x:Name="imgSO" Height="30" Width="180" RenderTransformOrigin="0.5,0.5" Canvas.Top="148" Canvas.Left="170"/>
+            <Label x:Name="lblSoNumber" Content="SO00114425455" Canvas.Left="191" Canvas.Top="176" Style="{StaticResource styBlabel}" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" />
+            <Label x:Name="lblCSo" Content="SO# :" HorizontalContentAlignment="Left" Style="{StaticResource styBlabel}" Height="19" Canvas.Left="166" Canvas.Top="176" Width="36" />
+            <Label Content="***** Pallet Label *****" Canvas.Left="89" FontSize="15" Canvas.Top="200" Width="183" Height="26"/>
+            <!--<Rectangle Stroke="#FF000000" Width="355" Height="1" StrokeThickness="1" StrokeDashArray="4 4" SnapsToDevicePixels="True" Canvas.Top="605" Canvas.Left="3"/>-->
+           
+            <!--<Image x:Name="imgPackNum" Height="30" Width="180" RenderTransformOrigin="0.5,0.5" Canvas.Left="170" Canvas.Top="148"/>
+            <Label x:Name="lblCPCK" Content="PACKING# :" HorizontalContentAlignment="Left" Style="{StaticResource styBlabel}" Height="19" Canvas.Left="170" Canvas.Top="176" Width="65" />
+            <Label x:Name="lblPckNum" Content="PCK2145355" Canvas.Left="220" Canvas.Top="176" Style="{StaticResource styBlabel}" RenderTransformOrigin="0.5,0.5" Width="90" />-->
+        </Canvas>
+    </Border>
+</Window>

@@ -1,0 +1,121 @@
+﻿<Window x:Class="PackingNet.Pages.wndModifyPallet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="wndModifyPallet" Height="345" Width="555" Loaded="Window_Loaded_1" WindowStartupLocation="CenterScreen">
+    <Viewbox>
+        <Grid x:Name="gridMain" Height="262" Width="613" >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="159*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="17*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="64"/>
+            </Grid.RowDefinitions>
+            <Grid x:Name="brdMessage2" Canvas.Left="500" Canvas.Top="250" Visibility="Collapsed">
+                <Grid>
+                    <Border  MinWidth="250"
+            Background="DimGray" 
+            BorderBrush="White" 
+            BorderThickness="1" 
+            CornerRadius="30,30,30,30" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" Height="114" Margin="511,322,296,294" Width="465" >
+                        <StackPanel HorizontalAlignment="Center" Margin="13,-3,6,0" Width="444">
+
+                            <!--<Button x:Name="btnClose" 
+                    		Margin="8" 
+                    		HorizontalAlignment="Left" 
+                    		Height="20" Width="20" 
+                    		Content="X" FontSize="12" 
+                    		FontFamily="Georgia" FontWeight="Bold" 
+                    		Foreground="WhiteSmoke" Background="Red" 
+                    		Click="mbox_cancel" />-->
+
+                            <Label FontFamily="Cambria" Content="Confirm Dialog" Padding="140,5,0,0"
+                    		FontWeight="Bold" FontSize="17" />
+                            <Label x:Name="lblmessage" FontSize="18" FontWeight="Bold" Foreground="White" 
+                        	Content="Are you sure?" Margin="2,0" Height="46"/>
+                            <Button HorizontalAlignment="Right" x:Name="YesButton2" 
+                        	Width="44" Margin="0,8,8,8" 
+                        	Padding="3,0,3,0" 
+                        	Content="Yes" Background="Black" 
+                        	Foreground="White" 
+                        	Click="mbox_ok" Height="23"/>
+                        </StackPanel>
+
+                    </Border>
+                </Grid>
+
+            </Grid>
+            <Label  x:Name="lblMessage" HorizontalAlignment="Left" Margin="32,63,0,0" VerticalAlignment="Top"  Foreground="Red" FontSize="20" FontWeight="Bold" Width="528" Height="43" />
+            <Label  x:Name="lblMessage2"  HorizontalAlignment="Left" Margin="38,106,0,0" VerticalAlignment="Top"  Foreground="Red" FontSize="15" FontWeight="Bold" Width="469" Height="45"/>
+            <TextBox Name="txtScannSKu" FontSize="20" TextWrapping="Wrap" KeyDown="txtScannSKu_KeyDown_1"  Margin="179,11,5,94" />
+
+            <ComboBox ItemsSource="{Binding Path=Collection}" FontSize="20"  Foreground="Black" x:Name="cmbPalletNUmber" Visibility="Hidden"  SelectionChanged="cmbPalletNUmber_SelectionChanged_1" Margin="245,17,52,100" RenderTransformOrigin="0.517,-0.402">
+                <ComboBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel />
+                    </ItemsPanelTemplate>
+                </ComboBox.ItemsPanel>
+            </ComboBox>
+            
+            
+            
+            <Button Name="btnAddsku" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109" Margin="52,152,0,0" Height="52" Background="#FF535353" Foreground="White" BorderBrush="{x:Null}" FontSize="18"  OpacityMask="#FFB45959" Click="btnAddsku_Click" Grid.RowSpan="3" Visibility="Collapsed"/>
+            <Button Name="btnRemovesku" Content="Remove Box" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Margin="259,150,0,0" Height="52" Click="Button_Click_1" Background="#FF535353" Foreground="White" BorderBrush="{x:Null}" FontSize="18"  OpacityMask="#FFB45959" Grid.RowSpan="3" Visibility="Collapsed"/>
+            <Button Name="btndeletesku" Content="Delete Pallet" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Margin="461,151,0,0" Height="52" Click="Button_Click_2" Background="#FF535353" Foreground="White" BorderBrush="{x:Null}" FontSize="18"  OpacityMask="#FFB45959" Grid.RowSpan="3" Grid.ColumnSpan="2" Visibility="Collapsed"/>
+            <Label x:Name="lblboxSelect" Content="Scan Pallet" FontSize="20" HorizontalAlignment="Left" Margin="30,11,0,0" VerticalAlignment="Top" Width="157" FontWeight="Bold" Height="37"/>
+            <!--<Label  x:Name="lblMessage" HorizontalAlignment="Left" Margin="11,-4,0,0" VerticalAlignment="Top"  Foreground="Red" FontSize="20" FontWeight="Bold" Width="524" Height="72" />
+            <Label  x:Name="lblMessage2"  HorizontalAlignment="Left" Margin="9,82,0,0" VerticalAlignment="Top"  Foreground="Red" FontSize="15" FontWeight="Bold" Width="469" Height="45" Grid.ColumnSpan="2"/>-->
+
+            <Label x:Name="lblNote" Content="Note:" FontSize="18" Margin="7,29,430,0" Grid.Row="2"  />
+
+            <Label x:Name="lblNote1" Content="1)Remove Box = Remove 1 Box at a time." FontSize="18" Margin="81,30,138,-5" RenderTransformOrigin="1.297,5.871" Grid.Row="2"    />
+
+            <Label x:Name="lblNote2" Content="2)Delete = Remove all Box's and Delete the Pallet." FontSize="18" Margin="81,66,91,-43" Grid.Row="2"/>
+
+
+            <Grid x:Name="brdMessage" Visibility="Collapsed" >
+                <Grid>
+                    <Border  MinWidth="250"
+            Background="DimGray" 
+            BorderBrush="Black" 
+            BorderThickness="1" 
+            CornerRadius="30,30,30,30" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" Margin="130,53,70,4" Width="377" Height="96" >
+                        <StackPanel HorizontalAlignment="Center" Margin="3,-4,5,-10" Width="364">
+                            <!--<Button x:Name="btnClose" 
+                            Margin="8" 
+                            HorizontalAlignment="Left" 
+                            Height="20" Width="20" 
+                            Content="X" FontSize="12" 
+                            FontFamily="Georgia" FontWeight="Bold" 
+                            Foreground="WhiteSmoke" Background="Red" 
+                            Click="mbox_cancel" />-->
+
+                            <Label FontFamily="Cambria" Content="Confirm Dialog" Padding="140,5,0,0"
+                               FontWeight="Bold" FontSize="14" />
+                            <Label x:Name="lblMessageDialog" FontSize="18" FontWeight="Bold" Foreground="White" 
+                        	Content="Are you sure?" Height="40" Margin="0,0,4,0"/>
+                            <Button HorizontalAlignment="Right" x:Name="YesButton" 
+                            	Width="43" Margin="0,8,8,8" 
+                            	Padding="3,0,3,0" 
+                            	Content="Yes" Background="Black" 
+                            	Foreground="White" 
+                            	Click="mbox_ok" Height="24"/>
+                        </StackPanel>
+
+                    </Border>
+
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+    </Viewbox>
+</Window>

@@ -1,0 +1,98 @@
+﻿-- Message Box Messages --
+Are you sure want to logout?|您确定要注销吗？
+Are you sure want to Exit?|您确定要退出吗？
+Session Expired|会话过期
+Session expired. Please login again to Continue...|时间插槽过期。请重新登录以继续...
+Not previous user|不是以前的用户
+You are not previously logged User.|你是不是以前登录的用户。
+Access denied|拒绝访问
+Incorrect User Name.|不正确的用户名。
+Shipment is under packing.|S根据包装发货。
+is packing The Shipment at station|停放车辆在车站的一批
+Shipment is already packed|一批货物已经是 水泄不通 辆在车站的一 批辆在车站的 一批辆在 车站的一批
+Please Check the Shipment ID!|请检查装运ID！
+not exists.|不存在。
+Manager Override|经理覆盖
+Manager override required.|经理需要覆盖。
+Please scan your badge.|经理需要覆盖。
+Update|经理需要覆盖。
+Setting Updated Successfully.|经理需要覆盖。
+Setting Updation fail.|经理需要覆盖。
+Record Upadate successfull.|经理需要覆盖。
+Record Upadate Fail.|经理需要覆盖。
+item(s) packed out of|项目或项目包装出来的
+Save Fail! Transaction Rollback Successful.|时间插槽过期。请重新登录以继
+Shipment packing Completed.|时间插槽过期。请重新登录以继
+Save Successfull!|时间插槽过期。请 重新登录以继
+Extra Packing!|v时间插槽过期。请重新登录以继
+Required quantiy of this product is paked.|请重新登录以继
+Please do not pack this Product.|时间 插槽过期。请重新登录以继续
+is not belongs to this shipment.|时间插 槽过期 请重新登 录以继续。
+Product not found|时间插槽 过期 请重新
+No product Found for this Code|时间插槽 过期 请重新 登录以继
+Exiting shipment will clear this shipment information.|时间插槽过期 请重新登录 以继续。
+Are you sure want to exit shipment?|时间插槽过 期请重新 登录以继续?
+You are not authorised to override.|时间插槽过期请重新登 录以继续。
+Please re-scan badge.|时间插槽过期请重新登录以继续。
+This Shipment is in override mode.( manager: |辆在车站的一 批辆在车站的. ( 辆在:
+To apply the setting Application Need to restart.|应用设置应用程序需要重新启动。
+Are you sure want to Re-start Application?|你肯定要重新启动应用程序吗？
+Setting Save Successfully.|时间插槽过期请重新登 录以继续。
+Setting Updated Successfully.|时间插槽过期请重新登 录以继续。
+Wrong Product!|时间插槽过期。
+The Product |时间插 
+-------new adds-------------
+Avg. Packing BoxTime(in Sec) |平均。包装盒时间（秒）
+Please scan your Shipment|请扫描您发货
+Local App Setting|全球国家配置应用程
+Auto logout time|全 球国 家
+User Management|用户名
+User Name|用户管理
+Station Name|站名
+Last Login |上次登录
+Product Name|产品名称
+Packed Time|盒装时间
+New User|新用户
+Total Packed|总盒装
+Continue any Way|仍要继续
+--------------------------------------
+Scan|扫描
+Role|角色
+Shipment|运输
+Home|首页
+Packing|包装
+Packer|打包机
+Image|图片中心
+Qty|货
+Complete|完成
+Box|盒
+Pkd.|设置
+Setting|设置
+Reports|报告
+Cancel|取消
+Welcome|欢迎
+Location|位置
+Language|语言
+Update|物已经是 水泄不
+Save|物已经是 水泄不
+Login|您确定要注销
+Logout|退出
+Warning|警告
+Exit|警告
+Error|错误
+user|用户
+by |由
+on |上
+at |于
+Continue|继续
+item(s).|项目
+Success|槽过期请重新登
+OK|行
+Yes|是
+No|不
+Sec|二段
+Min|最小
+Hour|小时
+-- Labels from all Projects --
+
+ 

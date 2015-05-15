@@ -1,0 +1,50 @@
+﻿<Window x:Class="Packing_Net.Pages.SettingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Setting" Height="760" Width="1280" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded_1"
+         ShowInTaskbar="True" Icon="/PackingNet;component/box1.ico" WindowState="Maximized" Background="#FF040404"
+        >
+    <Viewbox>
+        <Border  BorderThickness="4,0"  BorderBrush="#FFEEB41C">
+            <Grid>
+
+                <Canvas HorizontalAlignment="Left" Height="736" VerticalAlignment="Top" Width="1278" Margin="0,0,-4,-4">
+                    <Border Style="{StaticResource StyleApplicationBorderTOp}" >
+                        <Canvas Margin="1020,0,0,0" Height="87" VerticalAlignment="Top" Background="Black">
+                            <Label x:Name="lblUserTop" Style="{StaticResource StyleApplicationHeaderLabel}" Content="" Height="32" Canvas.Left="3" Canvas.Top="1" Width="251"  FontSize="15" FontWeight="Bold" Foreground="#FF2587BF" />
+                            <Label  x:Name="lblTime" Style="{StaticResource StyleApplicationHeaderLabel}" Content="Label" Height="28" Canvas.Left="4" Canvas.Top="25" Width="249"  FontSize="15"/>
+                            <Label Content="Shipping Manager" Style="{StaticResource lblTitleName}" Canvas.Left="-811" Canvas.Top="17"/>
+                        </Canvas>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="2" Height="85" Canvas.Left="4" Canvas.Top=" 1" Width="201" Background="#00AEEAF3" >
+                        <Image Source="/PackingNet;component/Images/imgKrausLogo.png" Stretch="UniformToFill" Margin="-2"/>
+
+                    </Border>
+
+                </Canvas>
+                <Border BorderBrush="Black" BorderThickness="1" Canvas.Left="-8" Canvas.Top="86" Width="1278" Margin="-2,85,4,0">
+                    <DockPanel LastChildFill="False" Margin="2,-4,-7,4">
+                        <Border BorderBrush="Black" BorderThickness="1" Height="668" VerticalAlignment="Top" Width="220" Background="Black" Margin="0,5,0,0">
+                            <Canvas>
+                                <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Name="btnTimeSetting" Content="Local App Setting"  Background="#FF535353" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="#FFE4DFDF" Canvas.Top="30" Width="161" Height="48" Canvas.Left="47" Click="btnTimeSetting_Click">
+                                </Button>
+
+                                <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content="Home" Name="btnHome"  Background="#FF535353" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="#FFE4DFDF" Canvas.Top="83" FontSize="14" Width="161" Height="45" Canvas.Left="47" Click="btnHome_Click">
+                                </Button>
+                                <Image Source="/PackingNet;component/Images/imgSetting.png" Height="40"
+                        	Width="40" Stretch="UniformToFill" Canvas.Left="9" Canvas.Top="35" />
+                                <Image Source="/PackingNet;component/Images/imgHome.png" Height="40"
+                        	Width="40" Stretch="UniformToFill" Canvas.Top="88" Canvas.Left="8" />
+
+                            </Canvas>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="1" Height="668" VerticalAlignment="Top" Width="1050" Margin="0,5,0,0">
+                            <Frame Name="frmMain" Content="Under Developmet" HorizontalAlignment="Left" Width="1056" Margin="-1,0,-7,0" NavigationUIVisibility="Hidden" Loaded="frmMain_Loaded" Background="#FFFFFCFC">
+                            </Frame>
+                        </Border>
+                    </DockPanel>
+                </Border>
+            </Grid>
+        </Border>
+    </Viewbox>
+</Window>

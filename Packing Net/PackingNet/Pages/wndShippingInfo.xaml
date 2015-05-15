@@ -1,0 +1,254 @@
+﻿<Window x:Class="PackingNet.Pages.wndShippingInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       Loaded="Window_Loaded_1"
+        Title="wndShippingInfo" Height="900" Width="1280"  WindowState="Maximized" WindowStartupLocation="CenterScreen"  >
+    <Viewbox>
+    <Grid >
+        
+        <!--<grid.columndefinitions>
+            <columndefinition width="160*"/>
+            <columndefinition width="153*"/>
+        </grid.columndefinitions>-->
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="150*"/>
+        </Grid.RowDefinitions>
+        <Border Margin="70,49,130,91" Grid.Row="1">
+           
+            <DataGrid Name="dtPalletsBoxes" Margin="26,58,26,20"
+                      SelectionMode="Extended" ItemsSource="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Center"
+        								Width="1000" ScrollViewer.CanContentScroll="False" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+        								ScrollViewer.VerticalScrollBarVisibility="Auto" CanUserAddRows="False" 	AutoGenerateColumns="False" 
+        								FontSize="17"    Background="#FFFBFBFB"        								 
+        								SelectionUnit="FullRow" 
+        								BorderThickness="1" 
+        								Cursor="Hand"   
+        								BorderBrush="Black"
+        								HorizontalGridLinesBrush="#FF575757" 
+        								VerticalGridLinesBrush="Gray"
+        								Height="503"  
+        								SelectedIndex="-1"  Grid.ColumnSpan="1" RowHeight="40" >
+                <DataGrid.Columns>
+                    <!--<DataGridTemplateColumn Header="Print" Width="62" >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate >
+                                <Canvas x:Name="cvButtons">
+                                    <Button x:Name="btnPrint" Width="50" Content="Print" Height="30"  Click="btnPrint_Click">
+                                    </Button>
+                                </Canvas>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>-->
+                    <!--<DataGridTemplateColumn Header="View" Width="62" >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate >
+                                <Canvas x:Name="cvButtons1">
+                                    <Button x:Name="btnView" Width="50" Content="View" Height="30"  Click="btnView_Click">
+                                    </Button>
+                                </Canvas>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>-->
+                    <!--<DataGridTextColumn Binding="{Binding PalletNumber}" Header="PalletNumber"  Width="200" IsReadOnly="True" FontSize="20">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>-->
+
+                    <DataGridTemplateColumn Header="Print" Width="100" >
+                        <DataGridTemplateColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTemplateColumn.HeaderStyle>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate >
+
+                                <Button x:Name="btnPrint" Width="80" Content="Print" Height="30"  Click="btnPrint_Click" Visibility="Hidden">
+                                </Button>
+
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Binding="{Binding BoxNumber}" Header="BoxNumber"  Width="250" IsReadOnly="True" FontSize="20">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding SKUNumber}" Header="SKU"  Width="500" IsReadOnly="True" FontSize="20">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding SKUQuantity}" Header="Quantity"  Width="150" IsReadOnly="True" FontSize="20">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </Border>
+        <Border Margin="50,12,50,666" Grid.Row="1">
+            <Canvas Margin="10 10 10 10">
+                <Label Name="lblReprint" Style="{StaticResource StyleLbl}" Width="340" Height="38" FontFamily="Arial" FontSize="25" Content="Re-print Shipment Details" Foreground="Red" FontWeight="Bold" Canvas.Left="434" Canvas.Top="-20" />
+                <Label Name="lblShipScan" Style="{StaticResource StyleLbl}" Width="340" Height="50" FontFamily="Arial" FontSize="25" Content="Please Scan your Shipment" FontWeight="Bold" Canvas.Left="55" Canvas.Top="18" />
+                <TextBox Name="txtShipmentScan" Width="400" Height="50" Canvas.Left="399" FontSize="25" Canvas.Top="20"/>
+                <Button Name="btnGo" Click="btnGO_Click" Style="{StaticResource StyleReportButton}" Content="GO" Width="100" Height="50" FontWeight="Bold" Canvas.Left="830" RenderTransformOrigin="0.3,0.4" Canvas.Top="20"/>
+                <Button Name="btnRefresh" Click="btnRefresh_Click" Style="{StaticResource StyleReportButton}" Content="Refresh" Width="100" Height="50" FontWeight="Bold" Canvas.Left="950" Canvas.Top="20"/>
+            </Canvas>
+        </Border>
+        <Button Name="btnClose" Content="Close" Click="btnClose_Click" Style="{StaticResource StyleReportButton}" HorizontalAlignment="Left" FontWeight="Bold" Margin="1130,42,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Height="50"/>
+        <!--<DataGrid x:Name="grdContent"  Margin="20,0,20,-296"
+        								SelectionMode="Extended" ItemsSource="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Center"
+        								Width="600" ScrollViewer.CanContentScroll="False" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+        								ScrollViewer.VerticalScrollBarVisibility="Auto" CanUserAddRows="False" 	AutoGenerateColumns="False" 
+        								FontSize="17"    Background="#FFFBFBFB"        								 
+        								SelectionUnit="FullRow" 
+        								BorderThickness="1" 
+        								Cursor="Hand"   
+        								 BorderBrush="Black"
+        								HorizontalGridLinesBrush="#FF575757" 
+        								VerticalGridLinesBrush="Gray"
+        								Height="916"  
+        								SelectedIndex="-1"  Grid.ColumnSpan="1"                    
+                                           >         
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Print" Width="62" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate >
+                            <Canvas x:Name="cvButtons">
+                                <Button x:Name="btnRed" Width="50" Content="Print" Height="30"  Click="btnRed_Click">
+                                </Button>
+                            </Canvas>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="View" Width="62" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate >
+                            <Canvas x:Name="cvButtons1">
+                                <Button x:Name="btnView" Width="50" Content="View" Height="30"  Click="btnView_Click">
+                                </Button>
+                            </Canvas>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Binding="{Binding BoxNumber}" Header="BoxNumber"  Width="180" IsReadOnly="True" FontSize="20">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>          
+        </DataGrid>-->
+
+        <!--<DataGrid x:Name="grdContentPallet" 
+                                            SelectionMode="Extended" ItemsSource="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Center"
+        								Width="600" ScrollViewer.CanContentScroll="False" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+        								ScrollViewer.VerticalScrollBarVisibility="Auto" CanUserAddRows="False" 	AutoGenerateColumns="False" 
+        								FontSize="17"    Background="#FFFBFBFB"        								 
+        								SelectionUnit="FullRow" 
+        								BorderThickness="1" 
+        								Cursor="Hand"   
+        								 BorderBrush="Black"
+        								HorizontalGridLinesBrush="#FF575757" 
+        								VerticalGridLinesBrush="Gray"
+        								Height="916"  
+        								SelectedIndex="-1"  Margin="20,0,20,-296" Grid.ColumnSpan="1"                      
+                                           >
+        
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Print" Width="62" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate >
+                            <Canvas x:Name="cvButtons">
+                                <Button x:Name="btnRed" Width="50" Content="Print" Height="30"  Click="btnRed_Click">
+                                </Button>
+                            </Canvas>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Binding="{Binding PalletNumber}" Header="PalletNumber"  Width="180" IsReadOnly="True" FontSize="20">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DataGrid x:Name="grdBoxSku"
+        								SelectionMode="Extended" ItemsSource="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Center"
+        								Width="550" ScrollViewer.CanContentScroll="False" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+        								ScrollViewer.VerticalScrollBarVisibility="Auto" CanUserAddRows="False" 	AutoGenerateColumns="False" 
+        								FontSize="17"    Background="#FFFBFBFB"        								 
+        								SelectionUnit="FullRow" 
+        								BorderThickness="1" 
+        								Cursor="Hand"   
+        								 BorderBrush="Black"
+        								HorizontalGridLinesBrush="#FF575757" 
+        								VerticalGridLinesBrush="Gray"
+        								Height="916"  
+        								SelectedIndex="-1"  Margin="20,0,20,-296" Grid.Column="2"                              
+                                           >          
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding SKUNumber}" Header="SKU"  Width="300" IsReadOnly="True" FontSize="20">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+              
+                <DataGridTextColumn Binding="{Binding SKUQuantity}" Header="QTY"  Width="180" IsReadOnly="True" FontSize="20">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>-->
+
+
+        <!--<Border Grid.ColumnSpan="2">-->
+        <!--<Button Content="GO" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Focusable="False" Canvas.Left="108" Canvas.Top="2" Width="157" Height="41" Background="#FF535353" BorderBrush="{x:Null}" Foreground="White" FontSize="16" FontWeight="Bold" Cursor="Hand" x:Name="btnGO" Click="btnGO_Click" Margin="868,-75,227,654" />-->
+        <!--</Border>-->
+        <!--<Border Margin="10,0,-10,0">-->
+        <!--<Button Content="Refresh" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Focusable="False" Canvas.Left="130" Canvas.Top="2" Width="157" Height="41" Background="#FF535353" BorderBrush="{x:Null}" Foreground="White" FontSize="16" FontWeight="Bold" Cursor="Hand" x:Name="btnRefresh" Click="btnRefresh_Click" Margin="1045,-75,50,654" />-->
+        <!--</Border>-->
+        <!--<Border Margin="13,5,-13,-5" >-->
+        <!--<Label Content="Please scan your Shipment" Canvas.Left="67" Canvas.Top="5" Style="{StaticResource StyleLbl}"  Width="300" Foreground="#FF959595" FontWeight="Bold" Margin="10,-70,942,649" />-->
+        <!--</Border>-->
+
+
+        <!--<Border Style="{StaticResource StyleFormLayout}" Height="70" Canvas.Left="330" Canvas.Top="-80" Width="519" Grid.ColumnSpan="2" Margin="320,-85,413,635">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFD1D1D1" Offset="0"/>
+                    <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <TextBox Style="{StaticResource StyleInputTextBox}" x:Name="txtShipmentId"   Canvas.Left="66" TextWrapping="Wrap" Canvas.Top="92" Width="392"  HorizontalAlignment="Center" VerticalAlignment="Center" KeyDown="txtShipmentId_KeyDown" CaretBrush="White" Height="44" Margin="63,16,64,15"/>
+        </Border>-->
+
+    </Grid>
+    </Viewbox>
+</Window>

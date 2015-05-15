@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>publish\|C:\Users\Shiva5\Desktop\|http://192.168.5.66/|http://192.168.5.66/WpfApp/publish/</PublishUrlHistory>
+    <InstallUrlHistory>\\Shiva5\Desktop\</InstallUrlHistory>
+    <SupportUrlHistory>http://192.168.5.66/</SupportUrlHistory>
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+    <ProjectView>ShowAllFiles</ProjectView>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartAction>Project</StartAction>
+    <StartProgram>C:\GITHUB\ShippingManager\ShippingManager\bin\Debug\ShippingManager.exe</StartProgram>
+  </PropertyGroup>
+</Project>
